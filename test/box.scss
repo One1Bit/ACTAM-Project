@@ -1,0 +1,189 @@
+@import "../../css/vars";
+
+.box {
+  $box-radius: 5px;
+
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-bottom: 20px;
+
+  border-radius: $box-radius;
+  border: 1px solid $K200;
+  box-shadow: 1px 2px 8px rgba($K500, 0.1), 2px 4px 28px rgba($K400, 0.1);
+  background: white;
+
+  // Box Header
+  &-header {
+    transition: 0.3s ease background-color;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 4px 8px 4px 20px;
+
+    border-top-left-radius: $box-radius;
+    border-top-right-radius: $box-radius;
+    background: $K50;
+
+    .opened & {
+      border-bottom: 1px solid $K200;
+      box-shadow: inset 0 -10px 8px -10px $K150;
+    }
+    .closed & {
+      border-bottom-left-radius: $box-radius;
+      border-bottom-right-radius: $box-radius;
+    }
+
+    // Box Title
+    &-title {
+      transition: 0.3s ease color;
+      display: flex;
+      align-items: center;
+      height: $input-height;
+
+      font-family: $headingFont;
+      font-size: 18px;
+      font-weight: 600;
+      color: $K600;
+    }
+
+    // Toggle
+    &-toggle {
+      display: flex;
+      flex-shrink: 0;
+      justify-content: center;
+      align-items: center;
+      margin-left: 8px;
+      padding: 0;
+
+      @media #{$query-min-sm} {
+        width: 44px;
+        height: 44px;
+      }
+      @media #{$query-max-sm} {
+        width: $input-height;
+        height: $input-height;
+      }
+
+      svg {
+        transition: 0.6s ease transform;
+        width: 80%;
+        height: 80%;
+
+        path {
+          transition: 0.3s ease fill;
+          fill: $K500;
+        }
+      }
+
+      .closed & {
+        svg {
+          transform: rotate(90deg);
+        }
+      }
+    }
+
+    &:hover {
+      background: $K100;
+
+      .box-header-title {
+        color: $K800;
+      }
+
+      .box-header-toggle svg path {
+        fill: $K800;
+      }
+    }
+  }
+
+  // Box Menu
+  &-menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 20px 0;
+  }
+
+  // Box Body
+  &-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 12px 20px;
+
+    font-family: $headingFont;
+
+    &-inner {
+      display: flex;
+      width: 100%;
+      padding: 12px 20px;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &-bottom {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      margin-top: 10px;
+      padding-top: 10px;
+      border-top: 1px solid $K100;
+    }
+  }
+
+  // Box Footer
+  &-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    min-height: $input-height;
+    padding: 6px 20px 8px;
+
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    border-top: 1px solid $K100;
+
+    &-label {
+      display: flex;
+      align-items: center;
+      height: $input-height;
+      margin-right: auto;
+
+      font-family: $font;
+      font-size: 14px;
+      color: $K600;
+      font-weight: 400;
+    }
+
+    &-text {
+      display: flex;
+      align-items: center;
+      height: $input-height;
+
+      font-size: 14px;
+
+      &.empty {
+        color: $K400;
+      }
+    }
+  }
+
+  // Closed box
+  &.closed {
+    .box-menu,
+    .box-body,
+    .box-footer {
+      display: none;
+    }
+  }
+
+  // No key/chart selected
+  .no-selection {
+    padding: 14px 0;
+
+    font-size: 14px;
+    color: $K400;
+  }
+}

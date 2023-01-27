@@ -1,0 +1,110 @@
+@import "../../css/vars";
+
+.box-key {
+  .box-title-label {
+    text-transform: capitalize;
+  }
+}
+
+// Key Details
+.relative-key {
+  display: flex;
+  flex: 1;
+  align-items: center;
+
+  &,
+  button {
+    font-size: 14px;
+    text-transform: capitalize;
+  }
+
+  .label {
+    display: inline-block;
+    padding-right: 6px;
+    color: $K600;
+  }
+  .value {
+    flex: 1;
+    color: $K900;
+    font-weight: 600;
+  }
+}
+
+// Chords with Grades
+.chords-with-grades {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 0 0 10px 0;
+
+  .pair {
+    transition: 0.2s ease background-color, 0.2s ease border-color;
+    cursor: pointer;
+    display: flex;
+    flex-shrink: 0;
+    flex-direction: column;
+    align-items: center;
+    width: 80px;
+    padding: 8px;
+
+    border-radius: 4px;
+    border: 1px solid transparent;
+
+    // Grade
+    .grade {
+      font-size: 18px;
+      font-weight: 600;
+      color: $K700;
+    }
+
+    // Chord
+    .chord {
+      transition: 0.2s ease color;
+      font-size: 15px;
+      font-weight: 600;
+      color: $K700;
+    }
+
+    // Harmonic Function
+    .harmonic-function {
+      transition: 0.2s ease color;
+      margin-top: 3px;
+
+      font-family: $font;
+      font-size: 12px;
+      color: $K400;
+    }
+
+    &.current {
+      box-shadow: 1px 2px 5px $K150;
+    }
+
+    &.current,
+    &:hover {
+      // background: $K50;
+      border-color: $K150;
+
+      .harmonic-function {
+        color: $K700;
+      }
+    }
+
+    // colors
+    &-major .grade {
+      // background: $major-color;
+      color: darken($major-color, 20%);
+    }
+    &-minor .grade {
+      // background: $minor-color;
+      color: darken($minor-color, 20%);
+    }
+    &-diminished .grade {
+      // background: $diminished-color;
+      color: darken($diminished-color, 20%);
+    }
+    &-augmented .grade {
+      // background: $augmented-color;
+      color: darken($augmented-color, 20%);
+    }
+  }
+}
