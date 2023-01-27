@@ -7,59 +7,58 @@
     <link rel="stylesheet" href="box_chord.css">
     <script src="box_chord.js"></script>
 </head>
+
 <body>
 <div class="container"></div>
 
-<div class="box">
-    <div>
-    <select id="key">
-        <option value="Key">Key</option>
-        <option value="C">C</option>
-        <option value="D">D</option>
-        <option value="E">E</option>
-        <option value="F">F</option>
-        <option value="G">G</option>
-        <option value="A">A</option>
-        <option value="B">B</option>
-    </select>
-    </div>
-    <div>
-    <select id="signature">
-        <option value="Signature">Signature</option>
-        <option value=""></option>
-        <option value="#">#</option>
-        <option value="b">b</option>
-    </select>
-    </div>
+<div id="scale-box">
+    <form>
+        <label for="key">Key:</label>
+        <select id="key">
+            <option value="C">C</option>
+            <option value="D">D</option>
+            <option value="E">E</option>
+            <option value="F">F</option>
+            <option value="G">G</option>
+            <option value="A">A</option>
+            <option value="B">B</option>
+        </select>
+        <label for="signature"></label>
+        <select id="signature">
+            <option value="Natural">Natural</option>
+            <option value="Sharp">Sharp</option>
+            <option value="Flat">Flat</option>
 
-    <div>
-    <select id="maj">
-        <option value="Major">Major</option>
-    </select>
-    </div>
+        </select>
+        <label for="majmin"></label>
+        <select id="majmin">
+            <option value="Major">Major</option>
+            <option value="Minor">Minor</option>
+        </select>
+        <button type="button" id="submit_btn" class="submitbutton">Scale</button>
+        <button type="button" id="submit_chord" class="submitbutton">Chord</button>
 
-    <div class="box-body">
-        <div id="scale_in_key">
 
-            <div class="note-in-scale" id="note1">C</div>
-            <div class="note-in-scale" id="note2">Db</div>
-            <div class="note-in-scale" id="note3">E</div>
-            <div class="note-in-scale" id="note4">F</div>
-            <div class="note-in-scale" id="note5">G</div>
-            <div class="note-in-scale" id="note6">A</div>
-            <div class="note-in-scale" id="note7">B</div>
-        </div>
+    </form>
 
-        <div class="chord_in_key">
+    <div id="scale_in_key"></div>
 
-        </div>
+
+
+
+    <div class="chord_in_key">
 
     </div>
 
 </div>
 
+</div>
+
 
 </body>
+
+
+
 
 
 
