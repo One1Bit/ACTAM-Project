@@ -1,7 +1,3 @@
-
-
-
-
 window.onload = function() {
     const key = document.getElementById("key");
     const signature = document.getElementById("signature");
@@ -14,12 +10,10 @@ window.onload = function() {
     let notes = [];
 
     submitBtn.addEventListener("click", function () {
-        // 获取用户输入的值
         const keyValue = key.value;
         const signatureValue = signature.value;
         const majminValue = majmin.value;
 
-        // 根据用户输入的值显示相应的音阶
         if (keyValue === "C" && signatureValue === "Natural" && majminValue === "Major") {
             scaleInKey.innerHTML = "C D E F G A B";
         } else if (keyValue === "D" && signatureValue === "Natural" && majminValue === "Major") {
@@ -122,7 +116,6 @@ window.onload = function() {
     }
 
     submitChord.addEventListener("click", function () {
-            // 获取用户输入的值
             const keyValue = key.value;
             const signatureValue = signature.value;
             const majminValue = majmin.value;
@@ -264,7 +257,22 @@ window.onload = function() {
         }
     );
 
+    document.getElementById("key").addEventListener("change", function() {
+        document.getElementById("scale_in_key").innerHTML = "";
+        document.getElementById("chord_in_key").innerHTML = "";
+    });
+    document.getElementById("signature").addEventListener("change", function() {
+        document.getElementById("scale_in_key").innerHTML = "";
+        document.getElementById("chord_in_key").innerHTML = "";
+    });
+    document.getElementById("majmin").addEventListener("change", function() {
+        document.getElementById("scale_in_key").innerHTML = "";
+        document.getElementById("chord_in_key").innerHTML = "";
+    });
+
+
+
 }
 
-// ADD A FUNCTION ONCE UPDATE KEY, CLEAR THE PAGE
+
 

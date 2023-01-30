@@ -3,10 +3,10 @@
 #scale-box {
     /* previous styles */
     position: absolute;
-    top: 50%;
+    top: 60%;
     left: 50%;
-    width: 40%;
-    height: 80%;
+    width: 30%;
+    height: 40%;
     transform: translate(-50%, -50%);
     background-color: #f2f2f2; /* add a background color */
     border-radius: 10px; /* add rounded corners */
@@ -43,14 +43,17 @@
     /* styles for the scale display */
     margin-top: 60px; /* add space above the scale */
     color: #333; /* change the text color */
-    font: 3vw 'Times New Roman', Times, serif;
+    font: 2vw 'Times New Roman', Times, serif;
 }
 
 #chord_in_key {
     /* styles for the scale display */
+    position: absolute;
     margin-top: 80px; /* add space above the scale */
     margin-left: 20px;
     color: #333; /* change the text color */
-    font: 2vw 'Times New Roman', Times, serif;
+    font: 1vw 'Times New Roman', Times, serif;
     text-align: left;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
