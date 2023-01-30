@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>ACTAM</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+      }
+      .piano-keys {
+        position: relative;
+        z-index: 1;
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        min-width: 924px;
+        height: 200px;
+        border-radius: 6px;
+        background: #eaedf0;
+        padding: 0;
+      }
+      .key-white {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 2;
+        width: 44px;
+        height: 100%;
+        border: 1px solid #e3e7eb;
+        background: #fff;
+        box-shadow: 1px 2px 3px #f2f4f5;
+        border-radius: 4px;
+      }
+      .key-black {
+        position:relative;
+        z-index: 3;
+        width: 34px;
+        height: 60%;
+        margin: 0 -17px;
+        border: 0;
+        background: #2c343d;
+        box-shadow: 1px 2px 3px rgb(44, 52, 61, 20%);
+        border-radius: 4px;
+      }
+      .key-white:hover {
+        cursor: pointer;
+        background-color: rgba(44, 52, 61, 0.05);
+        color: #2c343d;
+      }
+
+      .key-white:hover .key-label {
+        visibility: visible;
+      }
+      .key-white:hover .key-label-sharp {
+        visibility: visible;
+      }
+
+      .key-black:hover .key-label-black-flat{
+        visibility: visible;
+      }
+      .key-black:hover .key-label-black-sharp{
+        cursor: pointer;
+        background-color: #4c5b69;
+        visibility: visible;
+      }
+
+      .key-label {
+        display: flex;
+        position: absolute;
+        align-items: center;
+        justify-content: center;
+        top: 80%;
+        width: 28px;
+        height: 28px;
+
+        font-family: "Roboto", sans-serif;
+        font-size: 13px;
+        font-weight: 600;
+        line-height: 1;
+        color: black;
+        border-radius: 50%;
+        background-color: lightblue;
+        text-align: center;
+        visibility: hidden;
+      }
+      .key-label-sharp {
+        display: flex;
+        position: absolute;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        top: 65%;
+        width: 28px;
+        height: 28px;
+
+        font-family: "Roboto", sans-serif;
+        font-size: 13px;
+        font-weight: 600;
+        line-height: 1;
+        color: black;
+        border-radius: 50%;
+        background-color: lightblue;
+        text-align: center;
+        visibility: hidden;
+      }
+      .key-label-black-sharp{
+        display: flex;
+        position: absolute;
+        align-items: center;
+        justify-content: center;
+        transform:translate(10%,0);
+        top:45%;
+        width: 28px;
+        height: 28px;
+
+        font-family: "Roboto", sans-serif;
+        font-size: 13px;
+        font-weight: 600;
+        line-height: 1;
+        color: black;
+        border-radius: 50%;
+        background-color: lightblue;
+        text-align: center;
+        visibility: hidden;
+      }
+      .key-label-black-flat{
+        display: flex;
+        position: absolute;
+        align-items: center;
+        justify-content: center;
+        transform:translate(10%,0);
+        top: 70%;
+        width: 28px;
+        height: 28px;
+
+        font-family: "Roboto", sans-serif;
+        font-size: 13px;
+        font-weight: 600;
+        line-height: 1;
+        color: black;
+        border-radius: 50%;
+        background-color: lightblue;
+        text-align: center;
+        visibility: hidden;
+      }
+
+      /*Used by script*/
+      .key-white-click{
+
+      }
+
+    </style>
+  </head>
+  <body>
+    <div class="piano-keys">
+      <button class="key-white" note="F3">
+        <span class="key-label-sharp">E#</span>
+        <span class="key-label">F</span>
+      </button>
+      <button class="key-black" note="F3#">
+        <span class="key-label-black-sharp">F#</span>
+        <span class="key-label-black-flat">Gb</span>
+      </button>
+      <button class="key-white" note="G3">
+        <span class="key-label">G</span>
+      </button>
+      <button class="key-black" note="G3#">
+        <span class="key-label-black-sharp">G#</span>
+        <span class="key-label-black-flat">Ab</span>
+      </button>
+      <button class="key-white" note="A3">
+        <span class="key-label sharp">A</span>
+      </button>
+      <button class="key-black" note="A3#">
+        <span class="key-label-black-sharp">A#</span>
+        <span class="key-label-black-flat">Bb</span>
+      </button>
+      <button class="key-white" note="B3">
+        <span class="key-label-sharp">C#</span>
+        <span class="key-label">B</span>
+      </button>
+      <button class="key-white" note="C4">
+        <span class="key-label-sharp">Cb</span>
+        <span class="key-label">B</span>
+      </button>
+      <button class="key-black" note="C4#">
+        <span class="key-label-black-sharp">C#</span>
+        <span class="key-label-black-flat">Db</span>
+      </button>
+      <button class="key-white" note="D4">
+        <span class="key-label">D</span>
+      </button>
+      <button class="key-black" note="D4#">
+        <span class="key-label-black-sharp">D#</span>
+        <span class="key-label-black-flat">Eb</span>
+      </button>
+      <button class="key-white" note="E4">
+        <span class="key-label-sharp">Fb</span>
+        <span class="key-label">E</span>
+      </button>
+      <button class="key-white" note="F4">
+        <span class="key-label-sharp">E#</span>
+        <span class="key-label">F</span>
+      </button>
+      <button class="key-black" note="F4#">
+        <span class="key-label-black-sharp">F#</span>
+        <span class="key-label-black-flat">Gb</span>
+      </button>
+      <button class="key-white" note="G4">
+        <span class="key-label">G</span>
+      </button>
+      <button class="key-black" note="G4#">
+        <span class="key-label-black-sharp">G#</span>
+        <span class="key-label-black-flat">Ab</span>
+      </button>
+      <button class="key-white" note="A4">
+        <span class="key-label">A</span>
+      </button>
+      <button class="key-black" note="A4#">
+        <span class="key-label-black-sharp">A#</span>
+        <span class="key-label-black-flat">Bb</span>
+      </button>
+      <button class="key-white" note="B4">
+        <span class="key-label-sharp">Cb</span>
+        <span class="key-label">B</span>
+      </button>
+      <button class="key-white" note="C5">
+        <span class="key-label-sharp">B#</span>
+        <span class="key-label">C</span>
+      </button>
+      <button class="key-black" note="C5#">
+        <span class="key-label-black-sharp">C#</span>
+        <span class="key-label-black-flat">Db</span>
+      </button>
+      <button class="key-white" note="D5">
+        <span class="key-label">D</span>
+      </button>
+      <button class="key-black" note="D5#">
+        <span class="key-label-black-sharp">D#</span>
+        <span class="key-label-black-flat">Eb</span>
+      </button>
+      <button class="key-white" note="E5">
+        <span class="key-label-sharp">Fb</span>
+        <span class="key-label">E</span>
+      </button>
+      <button class="key-white" note="F5">
+        <span class="key-label-sharp">E#</span>
+        <span class="key-label">F</span>
+      </button>
+      <button class="key-black" note="F5#">
+        <span class="key-label-black-sharp">F#</span>
+        <span class="key-label-black-flat">Gb</span>
+      </button>
+      <button class="key-white" note="G5">
+        <span class="key-label">G</span>
+      </button>
+      <button class="key-black" note="G5#">
+        <span class="key-label-black-sharp">G#</span>
+        <span class="key-label-black-flat">Ab</span>
+      </button>
+      <button class="key-white" note="A5">
+        <span class="key-label">A</span>
+      </button>
+      <button class="key-black" note="A5#">
+        <span class="key-label-black-sharp">A#</span>
+        <span class="key-label-black-flat">Bb</span>
+      </button>
+      <button class="key-white" note="B5">
+        <span class="key-label-sharp">Cb</span>
+        <span class="key-label">B</span>
+      </button>
+      <button class="key-black" note="C6#">
+        <span class="key-label-black-sharp">C#</span>
+        <span class="key-label-black-flat">Db</span>
+      </button>
+      <button class="key-white" note="D6">
+        <span class="key-label-sharp">Fb</span>
+        <span class="key-label">D</span>
+      </button>
+    </div>
+  </body>
+</html>
