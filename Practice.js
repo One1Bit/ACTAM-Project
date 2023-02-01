@@ -34,7 +34,7 @@ window.onload = function() {
 function startPractice(practiceType, noteNumber){
     switch (practiceType) {
         case "note":
-            drawNotesOrChord(noteNumber);
+            drawNote(noteNumber);
             console.log(keyList.at(noteNumber).note);
             break;
 
@@ -65,22 +65,20 @@ function drawSupportLines(){
         console.log('1');
     }*/
 }
-function drawNote(x,y){
-    context.drawImage(imgWhole,x,y,44,44);
-}
-function drawNotesOrChord(noteNumber){
+
+function drawNote(note){
     context.clearRect(0, 0, canvas.width, canvas.height);
     context.drawImage(imgStaff,0,60,700,400)
     drawSupportLines();
-    let c= keyList.at(noteNumber).position;
+    let c= keyList.at(note).position;
     console.log(c);
-    //contextNotes.fillStyle = "green";
-    //contextNotes.fillRect(0, 0, 150, 100);
     if (c<17) {
-        drawNote(250 + 10 * c, 3 + 14.5 * c);
+        context.drawImage(imgWhole,250 + 10 * c,3 + 14.5 * c,44,44);
+
     }
     if (c>=17) {
-        drawNote(250 + 10 * c, 14.5 * c + 14.5 * 2);
+        context.drawImage(imgWhole,250 + 10 * c,14.5 * c + 14.5 * 2,44,44);
+
     }
 }
 ///draw all whole notes
