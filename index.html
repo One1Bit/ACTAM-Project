@@ -4,9 +4,12 @@
     <meta charset="UTF-8">
     <title>Chord Practice</title>
     <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="box_key.css">
     <link rel="stylesheet" href="box_chord.css">
     <link rel="stylesheet" href="piano.css">
-    <script src="box_chord.js"></script>
+    <script src="box.js"></script>
+
+
 
 </head>
 
@@ -139,9 +142,10 @@
 </div>
 
 
-<!-- CHORD -->
+<!-- KEY -->
 
 <div id="scale-box">
+    <div id="key-title">KEY</div>
     <form>
         <label for="key">Key:</label>
         <select id="key">
@@ -158,28 +162,65 @@
             <option value="Natural">Natural</option>
             <option value="Sharp">Sharp</option>
             <option value="Flat">Flat</option>
-
         </select>
         <label for="majmin"></label>
         <select id="majmin">
             <option value="Major">Major</option>
             <option value="Minor">Minor</option>
         </select>
+        <div class="key-button">
         <button type="button" id="submit_btn" class="submitbutton">Scale</button>
-        <button type="button" id="submit_chord" class="submitbutton">Chord</button>
-
+        <button type="button" id="submit_mode" class="submitbutton">Mode</button>
+        </div>
 
     </form>
 
     <div id="scale_in_key"></div>
+    <div id="mode_in_key"></div>
 
-
-    <div id="chord_in_key"></div>
 
 </div>
 
 </div>
 
+<div id="chord-box">
+    <div id="chord-title">CHORD</div>
+    <form>
+        <label for="Chord">Chord:</label>
+        <select id="key-">
+            <option value="C">C</option>
+            <option value="D">D</option>
+            <option value="E">E</option>
+            <option value="F">F</option>
+            <option value="G">G</option>
+            <option value="A">A</option>
+            <option value="B">B</option>
+        </select>
+        <label for="signature-"></label>
+        <select id="signature-">
+            <option value="Natural">Natural</option>
+            <option value="Sharp">Sharp</option>
+            <option value="Flat">Flat</option>
+        </select>
+
+        <select id="Chord">
+            <option value="Triads">Triads</option>
+            <option value="Tetrads">Tetrads</option>
+        </select>
+
+        <select id="chord-select" >
+            <option value="Major 3rd">Major 3rd</option>
+            <option value="Minor 3rd">Minor 3rd</option>
+            <option value="Diminished 3rd">Diminished 3rd</option>
+            <option value="Augmented 3rd">Augmented 3rd</option>
+        </select>
+        <div class="chord-button">
+        <button type="button" id="submit_chord" class="submitbutton">Chord</button>
+        </div>
+    </form>
+    <div id="chord-index"></div>
+
+</div>
 </body>
 
 

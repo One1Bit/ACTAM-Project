@@ -1,8 +1,8 @@
-#chord-box {
+#scale-box {
     /* previous styles */
     position: absolute;
     top: 60%;
-    right: 12%;
+    left: 12%;
     width: 35%;
     height: 43%;
     transform: translate(0%, -50%);
@@ -16,7 +16,7 @@
     text-align: center; /* center the contents horizontally */
 }
 
-#chord-box input {
+#scale-box input {
     /* styles for the input elements */
 
     font-size: 18px; /* increase font size */
@@ -27,7 +27,7 @@
     background-color: transparent; /* remove the default background */
 }
 
-#chord-title {
+#key-title {
     font-size: 20px;
     font-weight: bold;
     text-align: left;
@@ -37,13 +37,36 @@
     margin-bottom:10px;
 }
 
-
-.chord-button{
-    margin-top: 5px;
+.submitbutton{
+    /* styles for the submit button */
+    background-color: #4CAF50; /* change the background color */
+    color: white; /* change the text color */
+    padding: 12px 20px; /* adjust the padding */
+    border: none; /* remove the default border */
+    border-radius: 10px; /* add rounded corners */
+    cursor: pointer; /* change the cursor on hover */
+    margin-left: 10px;
 }
 
-#chord-index {
+#scale_in_key {
+    /* styles for the scale display */
     margin-top: 40px; /* add space above the scale */
     color: #333; /* change the text color */
     font: 2vw 'Times New Roman', Times, serif;
+}
+
+#mode_in_key {
+    /* styles for the scale display */
+    position: absolute;
+    margin-top: 80px; /* add space above the scale */
+    margin-left: 20px;
+    color: #333; /* change the text color */
+    font: 1vw 'Times New Roman', Times, serif;
+    text-align: left;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.key-button{
+    margin-top: 5px;
 }
