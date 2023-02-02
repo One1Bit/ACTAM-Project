@@ -4,43 +4,77 @@ function randomElement(notes){
     return Math.floor(Math.random() * notes.length);
 }
 
-
 const canvas = document.getElementById("canvas");
 const context = canvas.getContext("2d");
 let imgStaff = new Image();
 imgStaff.src = "icons/staff2.png";
 let imgWhole = new Image();
 imgWhole.src = "icons/Whole.png";
+let imgFlat = new Image();
+imgFlat.src = "icons/flat.png";
+let imgSharp = new Image();
+imgSharp.src = "icons/sharp.png";
 
 function renderStaff(){
    context.drawImage(imgStaff,0,60,700,400)
 }
 renderStaff();
-
+/*
+const selectItem = document.getElementById('practice-type')
+let index = selectItem.selectedIndex;
+selectItem.addEventListener('change', () => {
+    index = selectItem.selectedIndex;
+})*/
+const practiceTime=5000;
+let numberOfPractice=5;
+let counter;
+let randomNote;
+let PracticeOn=false;
 window.onload = function() {
     renderStaff();
     drawSupportLines();
-
-    //button func
-    //let notes=['C','D','E','F','G','A','B','C#','D#','F#','G#','A#','Db','Eb','Gb','Ab','Bb'];
-    let type='note';
     let a = document.getElementById('button-practice');
-            a.onclick = function() {
-                let note=randomElement(keyList);
-                startPractice(type,note);
-            }
-
-}
-function startPractice(practiceType, noteNumber){
-    switch (practiceType) {
-        case "note":
-            drawNote(noteNumber);
-            console.log(keyList.at(noteNumber).note);
-            break;
-
-        case "chord":
-            alert('f');
+    a.onclick = function (){
+        PracticeOn=true;
+        counter=0;
+        startPractice();
     }
+}
+
+
+window.addEventListener("keydown", matching);
+
+function matching(e){
+    if (PracticeOn===true) {
+        if (e.key === keyList.at(randomNote).shortcut) {
+            console.log("Right!");
+        } else {
+            console.log("Wrong!")
+        }
+        setTimeout(startPractice, 1000);
+    }
+    else{
+        return false
+    }
+}
+function startPractice(){
+        if (PracticeOn===true) {
+            randomNote = randomElement(keyList);
+            if (document.getElementById("practice-type").options.selectedIndex === 0) {
+                drawNote(randomNote);
+            } else if (document.getElementById("practice-type").options.selectedIndex === 1) {
+
+            } else {
+                console.log("Err is in window.onload choosing practice type")
+            }
+            counter++;
+            if (counter < numberOfPractice) {
+                setTimeout(startPractice, practiceTime);
+            }
+        }
+        else{
+            return false;
+        }
 
 }
 function drawLine(x1,x2,y){
@@ -51,7 +85,7 @@ function drawLine(x1,x2,y){
 }
 function drawSupportLines(){
 
-    let x=200;
+    let x=250;
     drawLine(x,600,26);
     drawLine(x,600,55);
     drawLine(x,600,84);
@@ -66,19 +100,26 @@ function drawSupportLines(){
     }*/
 }
 
-function drawNote(note){
+function drawNote(note) {
     context.clearRect(0, 0, canvas.width, canvas.height);
-    context.drawImage(imgStaff,0,60,700,400)
+    context.drawImage(imgStaff, 0, 60, 700, 400)
     drawSupportLines();
-    let c= keyList.at(note).position;
+    let c = keyList.at(note).position;
     console.log(c);
-    if (c<17) {
-        context.drawImage(imgWhole,250 + 10 * c,3 + 14.5 * c,44,44);
-
+    if (keyList.at(note).label.includes('#')) {
+        console.log('sharp');
+        if (c < 17) {
+            context.drawImage(imgSharp, 215 + 10 * c, 3 + 14.5 * c, 44, 44);
+        }
+        if (c >= 17) {
+            context.drawImage(imgSharp, 215 + 10 * c, 14.5 * c + 14.5 * 2, 44, 44);
+        }
     }
-    if (c>=17) {
-        context.drawImage(imgWhole,250 + 10 * c,14.5 * c + 14.5 * 2,44,44);
-
+    if (c < 17) {
+        context.drawImage(imgWhole, 250 + 10 * c, 3 + 14.5 * c, 44, 44);
+    }
+    if (c >= 17) {
+        context.drawImage(imgWhole, 250 + 10 * c, 14.5 * c + 14.5 * 2, 44, 44);
     }
 }
 ///draw all whole notes
