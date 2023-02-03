@@ -840,7 +840,20 @@ window.onload = function() {
 
 
 
+// piano
 
+
+
+}
+
+function playNote(note) {
+    const audioElement = document.createElement("audio");
+    audioElement.src = `${note}.mp3`;
+    audioElement.play().then(() => {
+        console.log(`${note}.mp3 is playing`);
+    }).catch((error) => {
+        console.error(`Error playing ${note}.mp3: ${error}`);
+    });
 }
 
 
