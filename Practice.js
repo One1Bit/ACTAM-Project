@@ -25,19 +25,22 @@ let index = selectItem.selectedIndex;
 selectItem.addEventListener('change', () => {
     index = selectItem.selectedIndex;
 })*/
-const practiceTime=5000;
+const practiceTime=1000;
 let numberOfPractice=5;
 let counter;
 let randomNote;
 let PracticeOn=false;
+
 window.onload = function() {
     renderStaff();
     drawSupportLines();
     let a = document.getElementById('button-practice');
     a.onclick = function (){
-        PracticeOn=true;
-        counter=0;
-        startPractice();
+        if(PracticeOn===false) {
+            PracticeOn = true;
+            counter = 0;
+            startPractice();
+        }
     }
 }
 
@@ -51,14 +54,19 @@ function matching(e){
         } else {
             console.log("Wrong!")
         }
-        setTimeout(startPractice, 1000);
+        //setTimeout(startPractice, 1000);
     }
     else{
         return false
     }
 }
+function drawTimer()
+{
+    return true
+}
 function startPractice(){
         if (PracticeOn===true) {
+            drawTimer();
             randomNote = randomElement(keyList);
             if (document.getElementById("practice-type").options.selectedIndex === 0) {
                 drawNote(randomNote);
@@ -70,6 +78,9 @@ function startPractice(){
             counter++;
             if (counter < numberOfPractice) {
                 setTimeout(startPractice, practiceTime);
+            }
+            else{
+                PracticeOn=false;
             }
         }
         else{
@@ -96,7 +107,7 @@ function drawSupportLines(){
     let yy=29;
     for(let i=0;i<800/yy;i++){
         drawLine(430,600,yy*i-3);
-        console.log('1');
+        console.log('42');
     }*/
 }
 
