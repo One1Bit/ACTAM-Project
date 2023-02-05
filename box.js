@@ -20,7 +20,60 @@ window.onload = function() {
 
 
 
-    // Key
+    // Original note: Alternated note notation
+    const note_map = {
+        "C#": "Cs",
+        "D#": "Ds",
+        "E#": "F",
+        "F#": "Fs",
+        "G#": "Gs",
+        "A#": "As",
+        "B#": "C",
+
+        "C##": "D",
+        "D##": "E",
+        "E##": "Fs",
+        "F##": "G",
+        "G##": "A",
+        "A##": "B",
+        "B##": "Cs",
+
+        "C###": "Ds",
+        "D###": "F",
+        "E###": "G",
+        "F###": "Gs",
+        "G###": "As",
+        "A###": "C",
+        "B###": "D",
+
+        "Cb": "B",
+        "Db": "Cs",
+        "Eb": "Ds",
+        "Fb": "E",
+        "Gb": "Fs",
+        "Ab": "Gs",
+        "Bb": "As",
+
+        "Cbb": "As",
+        "Dbb": "C",
+        "Ebb": "D",
+        "Fbb": "Ds",
+        "Gbb": "F",
+        "Abb": "G",
+        "Bbb": "A",
+
+        "Cbbb": "A",
+        "Dbbb": "B",
+        "Ebbb": "Cs",
+        "Fbbb": "D",
+        "Gbbb": "E",
+        "Abbb": "Fs",
+        "Bbbb": "Gs",
+
+    };
+
+
+    ///////////////// Key ///////////////////
     submitBtn.addEventListener("click", function () {
         const keyValue = key.value;
         const signatureValue = signature.value;
@@ -119,6 +172,125 @@ window.onload = function() {
     }
     );
 
+    // key - play audio
+   function playScale() {
+        const scale_notes = scaleInKey.innerHTML.split(" ");
+        console.log(scale_notes);
+
+       const modified_scale_notes = scale_notes.map(note => note_map[note] || note);
+       modified_scale_notes.push(modified_scale_notes[0]);
+       console.log(modified_scale_notes);
+
+
+       let octave = [];
+       let firstNote = modified_scale_notes[0];
+       if  (modified_scale_notes[0] === "Cs"&&
+           modified_scale_notes[1] === "Ds"&&
+           modified_scale_notes[2] === "F"&&
+           modified_scale_notes[3] === "Fs"&&
+           modified_scale_notes[4] === "Gs"&&
+           modified_scale_notes[5] === "As"&&
+           modified_scale_notes[6] === "C"
+       ) {
+           octave = [4, 4, 4, 4, 4, 4, 5, 5];
+       } else if  (modified_scale_notes[0] === "Ds"&&
+           modified_scale_notes[1] === "F"&&
+           modified_scale_notes[2] === "G"&&
+           modified_scale_notes[3] === "Gs"&&
+           modified_scale_notes[4] === "As"&&
+           modified_scale_notes[5] === "C"&&
+           modified_scale_notes[6] === "D"
+       ) {
+               octave = [4, 4, 4, 4, 4, 5, 5, 5];
+       } else if  (modified_scale_notes[0] === "Gs"&&
+           modified_scale_notes[1] === "As"&&
+           modified_scale_notes[2] === "C"&&
+           modified_scale_notes[3] === "Cs"&&
+           modified_scale_notes[4] === "Ds"&&
+           modified_scale_notes[5] === "F"&&
+           modified_scale_notes[6] === "G"
+       ) {
+           octave = [4, 4, 5, 5, 5, 5, 5, 5];
+       } else if  (modified_scale_notes[0] === "As"&&
+           modified_scale_notes[1] === "C"&&
+           modified_scale_notes[2] === "D"&&
+           modified_scale_notes[3] === "Ds"&&
+           modified_scale_notes[4] === "F"&&
+           modified_scale_notes[5] === "G"&&
+           modified_scale_notes[6] === "A"
+       ) {
+           octave = [4, 5, 5, 5, 5, 5, 5, 5];
+       } else if  (modified_scale_notes[0] === "As"&&
+           modified_scale_notes[1] === "C"&&
+           modified_scale_notes[2] === "Cs"&&
+           modified_scale_notes[3] === "Ds"&&
+           modified_scale_notes[4] === "F"&&
+           modified_scale_notes[5] === "Fs"&&
+           modified_scale_notes[6] === "Gs"
+       ) {
+           octave = [4, 5, 5, 5, 5, 5, 5, 5];
+       } else if (firstNote === "C"|| firstNote === "Cs") {
+           octave = [4, 4, 4, 4, 4, 4, 4, 5];
+       } else if (firstNote === "D"|| firstNote === "Ds") {
+           octave = [4, 4, 4, 4, 4, 4, 5, 5];
+       } else if (firstNote === "E"|| firstNote === "Es") {
+           octave = [4, 4, 4, 4, 4, 5, 5, 5];
+       } else if (firstNote === "F"|| firstNote === "Fs") {
+           octave = [4, 4, 4, 4, 5, 5, 5, 5];
+       } else if (firstNote === "G"|| firstNote === "Gs") {
+           octave = [4, 4, 4, 5, 5, 5, 5, 5];
+       } else if (firstNote === "A"|| firstNote === "As") {
+           octave = [4, 4, 5, 5, 5, 5, 5, 5];
+       } else if (firstNote === "B"|| firstNote === "Bs") {
+           octave = [4, 5, 5, 5, 5, 5, 5, 5];
+       }
+
+
+       for (let i = 0; i < modified_scale_notes.length; i++) {
+           setTimeout(() => {
+               // play audio
+               playNote(`${modified_scale_notes[i]}${octave[i]}`);
+               // change key color
+               document.querySelectorAll(`[note='${modified_scale_notes[i]}${octave[i]}']`).forEach(function(element) {
+                   if (element.classList.contains("key-white")) {
+                       element.style.backgroundColor = "rgb(229, 166, 166)";
+                   } else if (element.classList.contains("key-black")) {
+                       element.style.backgroundColor = "rgb(122,16,41)";
+                   }
+               });
+           }, 400 * i);
+
+           }
+
+       setTimeout(function() {
+           document.querySelectorAll(".key-white").forEach(function(element) {
+               element.style.backgroundColor = "white";
+           });
+
+           document.querySelectorAll(".key-black").forEach(function(element) {
+               element.style.backgroundColor = "black";
+           });
+       }, 4500);
+
+
+   }
+
+
+
+
+    // 同时播放-适用于和弦
+    // function playScale() {
+    //         const scale_notes = scaleInKey.innerHTML.split(" ");
+    //         scale_notes.forEach((note) => {
+    //             playNote(`${note}4`);
+    //         });
+
+    document.getElementById("play_scale").addEventListener("click", playScale);
+
+
+
+
+  // mode
     function formatModes(numbers, notes) {
         let modes = "";
         for (let i = 0; i < notes.length; i++) {
@@ -273,20 +445,48 @@ window.onload = function() {
     document.getElementById("key").addEventListener("change", function() {
         document.getElementById("scale_in_key").innerHTML = "";
         document.getElementById("mode_in_key").innerHTML = "";
+        document.getElementById("play_scale").style.display = "none";
+        document.querySelectorAll(".key-white").forEach(function(element) {
+            element.style.backgroundColor = "white";
+        });
+
+        document.querySelectorAll(".key-black").forEach(function(element) {
+            element.style.backgroundColor = "black";
+        });
+
+
     });
     document.getElementById("signature").addEventListener("change", function() {
         document.getElementById("scale_in_key").innerHTML = "";
         document.getElementById("mode_in_key").innerHTML = "";
+        document.getElementById("play_scale").style.display = "none";
+        document.querySelectorAll(".key-white").forEach(function(element) {
+            element.style.backgroundColor = "white";
+        });
+
+        document.querySelectorAll(".key-black").forEach(function(element) {
+            element.style.backgroundColor = "black";
+        });
+
     });
     document.getElementById("majmin").addEventListener("change", function() {
         document.getElementById("scale_in_key").innerHTML = "";
         document.getElementById("mode_in_key").innerHTML = "";
+        document.getElementById("play_scale").style.display = "none";
+        document.querySelectorAll(".key-white").forEach(function(element) {
+            element.style.backgroundColor = "white";
+        });
+
+        document.querySelectorAll(".key-black").forEach(function(element) {
+            element.style.backgroundColor = "black";
+        });
+
     });
 
 
 
 
-    // Chord
+    /////////////////// Chord /////////////////////
     // select part
     document.getElementById("Chord").addEventListener("change", function () {
         const chordSelect = document.getElementById("chord-select");
@@ -823,32 +1023,93 @@ window.onload = function() {
         }
     );
 
+    // index-part: when click Chord button, Play button shows
+    document.getElementById("submit_chord").addEventListener("click", function() {
+        document.getElementById("play_chord").style.display = "block";
+    });
+    document.getElementById("play_chord").style.display = "none";
+
+
+
+////////DOING!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+    function playChord() {
+        const reference = ['C', 'Cs', 'D', 'Ds', 'E', 'F', 'Fs', 'G', 'Gs', 'A', 'As', 'B'];
+        const chord_notes = ChordInKey.innerHTML.split(" ");
+        console.log(chord_notes);
+
+        const modified_chord_notes = chord_notes.map(note => note_map[note] || note);
+        console.log(modified_chord_notes);
+
+        const octave_chord = [4];
+
+
+        for (let i = 1; i < modified_chord_notes.length; i++) {
+            const note = modified_chord_notes[i];
+            const index = reference.indexOf(note);
+            if (index < reference.indexOf(modified_chord_notes[0])) {
+                octave_chord[i] = 5;
+            } else {
+                octave_chord[i] = 4;
+            }
+
+        }
+        console.log(octave_chord);
+
+        for (let i = 0; i < modified_chord_notes.length; i++) {
+            setTimeout(() => {
+                // play audio
+                playNote(`${modified_chord_notes[i]}${octave_chord[i]}`);
+                // change key color
+                document.querySelectorAll(`[note='${modified_chord_notes[i]}${octave_chord[i]}']`).forEach(function (element) {
+                    if (element.classList.contains("key-white")) {
+                        element.style.backgroundColor = "rgb(229, 166, 166)";
+                    } else if (element.classList.contains("key-black")) {
+                        element.style.backgroundColor = "rgb(122,16,41)";
+                    }
+                });
+            }, 0);
+        }
+    }
+
+
+
+
+
+    document.getElementById("play_chord").addEventListener("click", playChord);
+
+
+
+
 
     // update part
     document.getElementById("key-").addEventListener("change", function() {
         document.getElementById("chord-index").innerHTML = "";
+        document.getElementById("play_chord").style.display = "none";
     });
     document.getElementById("signature-").addEventListener("change", function() {
         document.getElementById("chord-index").innerHTML = "";
+        document.getElementById("play_chord").style.display = "none";
     });
     document.getElementById("Chord").addEventListener("change", function() {
         document.getElementById("chord-index").innerHTML = "";
+        document.getElementById("play_chord").style.display = "none";
     });
     document.getElementById("chord-select").addEventListener("change", function() {
         document.getElementById("chord-index").innerHTML = "";
+        document.getElementById("play_chord").style.display = "none";
     });
 
-
-
-// piano
 
 
 
 }
 
+// piano
+
 function playNote(note) {
     const audioElement = document.createElement("audio");
-    audioElement.src = `${note}.mp3`;
+    audioElement.src = `PianoAudio/${note}.mp3`;
     audioElement.play().then(() => {
         console.log(`${note}.mp3 is playing`);
     }).catch((error) => {

@@ -37,6 +37,12 @@
     margin-bottom:10px;
 }
 
+.button-container {
+    display: flex;
+    margin: 10px;
+}
+
+
 .submitbutton{
     /* styles for the submit button */
     background-color: #4CAF50; /* change the background color */
@@ -48,9 +54,22 @@
     margin-left: 10px;
 }
 
+.playbutton{
+    /* styles for the submit button */
+    background-color: #146201; /* change the background color */
+    color: white; /* change the text color */
+    padding: 10px 15px; /* adjust the padding */
+    border: none; /* remove the default border */
+    border-radius: 10px; /* add rounded corners */
+    cursor: pointer; /* change the cursor on hover */
+    margin-left: 10px;
+    font-size: 12px;
+
+}
+
 #scale_in_key {
     /* styles for the scale display */
-    margin-top: 40px; /* add space above the scale */
+    margin-top: 80px; /* add space above the scale */
     color: #333; /* change the text color */
     font: 2vw 'Times New Roman', Times, serif;
 }
@@ -68,5 +87,11 @@
 }
 
 .key-button{
+    position: absolute;
     margin-top: 5px;
+    display: flex;
+    left:50%;
+    transform: translate(-50%, 0%);
+
+
 }
