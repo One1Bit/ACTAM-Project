@@ -7,7 +7,7 @@ export const keyList = [
         label: "C",
         enharmoniclabel: "B#",
         midi: 72,
-        shortcut: ";",
+        shortcut: "q",
         position: 30,
     },
     {
@@ -17,7 +17,7 @@ export const keyList = [
         label: "C#",
         enharmoniclabel: "Db",
         midi: 73,
-        shortcut: "[",
+        shortcut: "2",
         position: 30,
     },
     {
@@ -27,7 +27,7 @@ export const keyList = [
         label: "D",
         enharmoniclabel: false,
         midi: 74,
-        shortcut: "'",
+        shortcut: "w",
         position: 29,
     },
     {
@@ -37,7 +37,7 @@ export const keyList = [
         label: "D#",
         enharmoniclabel: "Eb",
         midi: 75,
-        shortcut: "]",
+        shortcut: "3",
         position: 29,
     },
     {
@@ -47,7 +47,7 @@ export const keyList = [
         label: "E",
         enharmoniclabel: "Fb",
         midi: 76,
-        shortcut: "]",
+        shortcut: "e",
         position: 28,
     },
     {
@@ -57,7 +57,7 @@ export const keyList = [
         label: "F",
         enharmoniclabel: "E#",
         midi: 77,
-        shortcut: "]",
+        shortcut: "r",
         position: 27,
     },
     {
@@ -67,7 +67,7 @@ export const keyList = [
         label: "F#",
         enharmoniclabel: "Gb",
         midi: 78,
-        shortcut: "]",
+        shortcut: "5",
         position: 27,
     },
     {
@@ -77,7 +77,7 @@ export const keyList = [
         label: "G",
         enharmoniclabel: false,
         midi: 79,
-        shortcut: "]",
+        shortcut: "t",
         position: 26,
     },
     {
@@ -87,7 +87,7 @@ export const keyList = [
         label: "G#",
         enharmoniclabel: "Ab",
         midi: 80,
-        shortcut: "]",
+        shortcut: "6",
         position: 26,
     },
     {
@@ -97,7 +97,7 @@ export const keyList = [
         label: "A",
         enharmoniclabel: false,
         midi: 81,
-        shortcut: "]",
+        shortcut: "y",
         position: 25,
     },
     {
@@ -107,7 +107,7 @@ export const keyList = [
         label: "A#",
         enharmoniclabel: "Bb",
         midi: 82,
-        shortcut: "]",
+        shortcut: "7",
         position: 25,
     },
     {
@@ -117,7 +117,7 @@ export const keyList = [
         label: "B",
         enharmoniclabel: "Cb",
         midi: 83,
-        shortcut: "]",
+        shortcut: "u",
         position: 24,
     },
 
@@ -129,7 +129,7 @@ export const keyList = [
         label: "C",
         enharmoniclabel: false,
         midi: 53,
-        shortcut: "]",
+        shortcut: "i",
         position: 23,
     },
     {
@@ -139,18 +139,8 @@ export const keyList = [
         label: "C#",
         enharmoniclabel: "Db",
         midi: 61,
-        shortcut: "r",
+        shortcut: "9",
         position: 23,
-    },
-    {
-        note: "D#3",
-        enharmonic: "Eb3",
-        color: "black",
-        label: "D#",
-        enharmoniclabel: "Eb",
-        midi: 75,
-        shortcut: "]",
-        position: 22,
     },
     {
         note: "D3",
@@ -159,7 +149,17 @@ export const keyList = [
         label: "D",
         enharmoniclabel: false,
         midi: 74,
-        shortcut: "'",
+        shortcut: "o",
+        position: 22,
+    },
+    {
+        note: "D#3",
+        enharmonic: "Eb3",
+        color: "black",
+        label: "D#",
+        enharmoniclabel: "Eb",
+        midi: 75,
+        shortcut: "0",
         position: 22,
     },
     {
@@ -169,7 +169,7 @@ export const keyList = [
         label: "E",
         enharmoniclabel: "Fb",
         midi: 64,
-        shortcut: "g",
+        shortcut: "p",
         position: 21,
     },
     {
@@ -179,7 +179,7 @@ export const keyList = [
         label: "F",
         enharmoniclabel: "E#",
         midi: 53,
-        shortcut: "]",
+        shortcut: "z",
         position: 20,
     },
     {
@@ -189,7 +189,7 @@ export const keyList = [
         label: "F#",
         enharmoniclabel: "Gb",
         midi: 54,
-        shortcut: "]",
+        shortcut: "s",
         position: 20,
     },
     {
@@ -199,7 +199,7 @@ export const keyList = [
         label: "G",
         enharmoniclabel: false,
         midi: 55,
-        shortcut: "]",
+        shortcut: "x",
         position: 19,
     },
     {
@@ -209,7 +209,7 @@ export const keyList = [
         label: "G#",
         enharmoniclabel: "Ab",
         midi: 56,
-        shortcut: "q",
+        shortcut: "d",
         position: 19,
     },
     {
@@ -219,7 +219,7 @@ export const keyList = [
         label: "A",
         enharmoniclabel: false,
         midi: 57,
-        shortcut: "a",
+        shortcut: "c",
         position: 18,
     },
     {
@@ -229,7 +229,7 @@ export const keyList = [
         label: "A#",
         enharmoniclabel: "Bb",
         midi: 58,
-        shortcut: "w",
+        shortcut: "f",
         position: 18,
     },
     {
@@ -239,7 +239,7 @@ export const keyList = [
         label: "B",
         enharmoniclabel: "Cb",
         midi: 59,
-        shortcut: "s",
+        shortcut: "v",
         position: 17,
     },
 
@@ -251,7 +251,7 @@ export const keyList = [
         label: "C",
         enharmoniclabel: "B#",
         midi: 60,
-        shortcut: "d",
+        shortcut: "b",
         position: 16,
     },
     {
@@ -261,7 +261,7 @@ export const keyList = [
         label: "C#",
         enharmoniclabel: "Db",
         midi: 61,
-        shortcut: "r",
+        shortcut: "h",
         position: 16,
     },
     {
@@ -271,7 +271,7 @@ export const keyList = [
         label: "D",
         enharmoniclabel: false,
         midi: 62,
-        shortcut: "f",
+        shortcut: "n",
         position: 15,
     },
     {
@@ -281,7 +281,7 @@ export const keyList = [
         label: "D#",
         enharmoniclabel: "Eb",
         midi: 63,
-        shortcut: "t",
+        shortcut: "j",
         position: 15,
     },
     {
@@ -291,7 +291,7 @@ export const keyList = [
         label: "E",
         enharmoniclabel: "Fb",
         midi: 64,
-        shortcut: "g",
+        shortcut: "m",
         position: 14,
     },
     {
@@ -301,7 +301,7 @@ export const keyList = [
         label: "F",
         enharmoniclabel: "E#",
         midi: 65,
-        shortcut: "h",
+        shortcut: ",",
         position: 13,
     },
     {
@@ -311,7 +311,7 @@ export const keyList = [
         label: "F#",
         enharmoniclabel: "Gb",
         midi: 66,
-        shortcut: "u",
+        shortcut: "l",
         position: 13,
     },
     {
@@ -321,7 +321,7 @@ export const keyList = [
         label: "G",
         enharmoniclabel: false,
         midi: 67,
-        shortcut: "j",
+        shortcut: ".",
         position: 12,
     },
     {
@@ -331,7 +331,7 @@ export const keyList = [
         label: "G#",
         enharmoniclabel: "Ab",
         midi: 68,
-        shortcut: "i",
+        shortcut: ";",
         position: 12,
     },
     {
@@ -341,7 +341,7 @@ export const keyList = [
         label: "A",
         enharmoniclabel: false,
         midi: 69,
-        shortcut: "k",
+        shortcut: "/",
         position: 11,
     },
     {
@@ -351,7 +351,7 @@ export const keyList = [
         label: "A#",
         enharmoniclabel: "Bb",
         midi: 70,
-        shortcut: "o",
+        shortcut: "'",
         position: 11,
     },
     {
@@ -361,7 +361,7 @@ export const keyList = [
         label: "B",
         enharmoniclabel: "Cb",
         midi: 71,
-        shortcut: "l",
+        shortcut: "§",
         position: 10,
     },
 

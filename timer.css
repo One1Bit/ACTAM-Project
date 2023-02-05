@@ -1,0 +1,75 @@
+
+.base-timer {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    opacity: 0.8;
+}
+
+.base-timer__svg {
+    transform: scaleX(-1);
+}
+
+.base-timer__circle {
+    fill: none;
+    stroke: none;
+}
+
+.base-timer__path-elapsed {
+    stroke-width: 7px;
+    stroke: grey;
+}
+
+.base-timer__path-remaining {
+    stroke-width: 7px;
+    stroke-linecap: round;
+    transform: rotate(90deg);
+    transform-origin: center;
+    transition: 1s linear all;
+    fill-rule: nonzero;
+    stroke: currentColor;
+}
+
+.base-timer__path-remaining.green {
+    color: rgb(65, 184, 131);
+}
+
+.base-timer__path-remaining.orange {
+    color: orange;
+}
+
+.base-timer__path-remaining.red {
+    color: red;
+}
+
+.base-timer__label {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+}
+
+
+
+#app{
+    position: absolute;
+    bottom: 100%;
+}
+#app2{
+    position: absolute;
+    right:42%;
+    top: -10%;
+}
+p{
+    position: absolute;
+    white-space: nowrap;
+    font-size: 24px;
+    font-weight: normal;
+    cursor: pointer;
+    text-shadow: 0 0 5px #999;
+    transition: border-color .2s ease,box-shadow .2s ease;
+}
