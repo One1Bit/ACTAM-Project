@@ -5,6 +5,7 @@
     <title>Chord Practice</title>
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="box-practice.css">
+    <link rel="stylesheet" href="timer.css">
     <link rel="prefetch" href="icons/Whole.png">
     <base href="/">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
@@ -25,7 +26,6 @@
                     </select>
                 </div>
                 <div class="button-group">
-                    <i class="far fa-eye" id="togglePassword" style="margin-left: 30px; cursor: pointer;"></i>
                     <button id="button-practice">
                         <img class="icon-practice" src="icons/practice.png">
                         <span>Practice</span>
@@ -37,11 +37,14 @@
                         height="600px"
                         width="800px">
                 </canvas>
+                <div id="app"></div>
+                <div id="app2"></div>
             </div>
         </div>
     </div>
 </div>
 <script src="Practice.js" type="module"></script>
+<script src="Timer.js" type="module"></script>
 <script src="Lists.js" type="module"></script>
 </body>
 </html>
