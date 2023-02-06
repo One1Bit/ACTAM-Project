@@ -180,3 +180,13 @@
     align-items: center;
     height: 1px;
 }
+
+#to-practice-page{
+    position: absolute;
+    top: 5%;
+    right: 2%;
+    display: flex;
+    justify-content:left;
+    align-items: center;
+    height: 1px;
+}
