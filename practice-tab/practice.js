@@ -54,7 +54,10 @@ export let rightClick=true;
 export function setRightClick(value) {
     rightClick = value;
 }
+
 window.addEventListener("keydown", matching);
+
+
 function dyingKeys(name){
     document.querySelectorAll(`[note='${name}']`).forEach(function(element) {
         if (element.classList.contains("key-white")) {
@@ -93,17 +96,19 @@ function matching(e) {
             //}
             //interacting with keyboard wring choice
             document.querySelectorAll(`[note='${namePressedNote}']`).forEach(function(element) {
-                element.style.backgroundColor = "rgb(159,29,52)";
-                setTimeout(()=>
-                {element.style.backgroundColor = "rgb(255,255,255)";
-                }, 1500);
+                if (element.classList.contains("key-white")) {
+                    element.style.backgroundColor = "rgb(171,28,28)";
+                    setTimeout(()=>
+                    {element.style.backgroundColor = "rgb(255,255,255)";
+                    }, 1500);
+                } else if (element.classList.contains("key-black")) {
+                    element.style.backgroundColor = "rgb(159,10,10)";
+                    setTimeout(()=>
+                    {element.style.backgroundColor = "rgb(44,52,61)";
+                    }, 1500);
+                }
             });
-            document.querySelectorAll(`[note='${nameCorrectNote}']`).forEach(function(element) {
-                element.style.backgroundColor = "rgb(9,166,37)";
-                setTimeout(()=>
-                {element.style.backgroundColor = "rgb(255,255,255)";
-                }, 1500);
-            });
+            dyingKeys(nameCorrectNote);
 
         }
 
