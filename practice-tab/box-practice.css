@@ -11,28 +11,40 @@
     width: 100%;
     align-items: center;
     justify-content: center;
+    background-color: #262c49;
 }
 .layout-center{
     width: 100%;
     max-width: 1100px;
     padding: 30px 20px 40px;
-    margin-top: 350px;
+    margin-top: 170px;
 }
 #box-practice{
     display: flex;
     flex-direction: column;
     width: 60%;
-    height: 40%;
+    height: 30%;
 }
 .box{
+    transform: scale(0.6);
+    margin: 0 auto;
+
     display: flex;
     flex-direction: column;
     width: 100%;
-    margin-bottom: 20px;
-    border-radius: 5px;
+    /*margin-bottom: 20px;*/
+    /*border-radius: 5px;*/
     border: 1px solid #e3e7eb;
-    box-shadow: 1px 2px 8px rgb(138 154 171 / 10%), 2px 4px 28px rgb(182 193 203 / 10%);
-    background: #fff;
+    /*box-shadow: 1px 2px 8px rgb(138 154 171 / 10%), 2px 4px 28px rgb(182 193 203 / 10%);*/
+    /*background: #fff;*/
+
+    background-color: #ffffff; /* add a background color */
+    border-radius: 10px; /* add rounded corners */
+    box-shadow: 2px 2px 5px #ccc; /* add a subtle shadow */
+    padding: 1px; /* add some padding to the contents */
+    border-top: 10px solid gray; /* add a border */
+    border-bottom: 10px solid gray;
+
 }
 .box-header{
     transition: background-color .3s ease;
@@ -86,7 +98,7 @@
     font-size: 18px;
     font-weight: 600;
     line-height: 26px;
-    color: #1fc7b6;
+    color: #1f41c7;
     flex: 1 1;
     max-width: 200px;
 }
@@ -120,4 +132,62 @@ button:hover{
     padding: 5px;
     width: 40px;
     height: 40px;
+}
+
+.navbar {
+    position: absolute;
+    top: 0%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    width:1500px;
+    padding: 0 656px;
+    background: linear-gradient(to bottom right, red, yellow);
+
+    font-weight: bold;
+    font-size: 28px;
+    letter-spacing: 10px;
+
+}
+.navbar a {
+    color: white;
+    text-decoration: none;
+    margin-right: 20px;
+}
+
+.tolearnpage{
+    position: absolute;
+    top: 3.5%;
+    left: 2%;
+    display: flex;
+    justify-content:left;
+    align-items: center;
+    height: 1px;
+
+}
+
+.button_topage{
+    padding: 5px 10px;
+    background-color: #050801;
+    color: #f34c04;
+    font-weight: bold;
+    font-size: 20px;
+    border: none;
+    border-radius: 5px;
+    letter-spacing: 2px;
+    overflow: hidden;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.button_topage:hover{
+    background: #f34c04;
+    color: #050801;
+    box-shadow: 0 0 5px #f34c04,
+    0 0 25px #f34c04,
+    0 0 50px #f34c04,
+    0 0 200px #f34c04;
+    -webkit-box-reflect:below 1px linear-gradient(transparent, #0005);
+
 }

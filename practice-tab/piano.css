@@ -1,41 +1,26 @@
 
 
-.navbar {
-    position: absolute;
-    top: 0%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 60px;
-    padding: 0 656px;
-    background: linear-gradient(to bottom right, red, yellow);
-
-    font-weight: bold;
-    font-size: 28px;
-    letter-spacing: 10px;
+#piano {
+    transform: scale(0.8);
+    margin: 0 auto;
+    left:7%;
+    top:10%;
 
 }
-.navbar a {
-    color: white;
-    text-decoration: none;
-    margin-right: 20px;
-}
-
-
 
 #piano-keyboard{
     position: absolute;
     top: 50%;
-    left: 50%;
+    /*left: 50%;*/
     width: 40%;
     height: 80%;
-    transform: translate(-50%, -50%);
+    /*transform: translate(-50%, -50%);*/
     background-color: #f2f2f2; /* add a background color */
     border-radius: 10px; /* add rounded corners */
     box-shadow: 2px 2px 5px #ccc; /* add a subtle shadow */
     padding: 20px; /* add some padding to the contents */
     border: 1px solid gray; /* add a border */
-    margin: 50px auto; /* center the box horizontally */
+    /*margin: 50px auto; !* center the box horizontally *!*/
     text-align: center; /* center the contents horizontally */
 }
 
@@ -151,7 +136,7 @@
     position: absolute;
     align-items: center;
     justify-content: center;
-    transform: translate(10%, 0);
+    transform: translate(-18%, 0);
     top: 45%;
     width: 28px;
     height: 28px;
@@ -171,7 +156,7 @@
     position: absolute;
     align-items: center;
     justify-content: center;
-    transform: translate(10%, 0);
+    transform: translate(-18%, 0);
     top: 70%;
     width: 28px;
     height: 28px;
@@ -196,54 +181,10 @@
     visibility: hidden;
 }
 
-.show-hide{
-    position: absolute;
-    top: 30%;
-    left: 2%;
-    display: flex;
-    justify-content:left;
-    align-items: center;
-    height: 1px;
-}
-
-
-.topracticepage{
-    position: absolute;
-    top: 3.5%;
-    right: 2%;
-    display: flex;
-    justify-content:left;
-    align-items: center;
-    height: 1px;
-
-}
-
-.button_topage{
-    padding: 5px 10px;
-    background-color: #050801;
-    color: #f34c04;
-    font-weight: bold;
-    font-size: 20px;
-    border: none;
-    border-radius: 5px;
-    letter-spacing: 2px;
-    overflow: hidden;
-    transition: 0.5s;
-    cursor: pointer;
-}
 
 
 
-.button_topage:hover{
-    background: #f34c04;
-    color: #050801;
-    box-shadow: 0 0 5px #f34c04,
-    0 0 25px #f34c04,
-    0 0 50px #f34c04,
-    0 0 200px #f34c04;
-    -webkit-box-reflect:below 1px linear-gradient(transparent, #0005);
 
-}
 
 .white{
     fill:white;

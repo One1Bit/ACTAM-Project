@@ -269,5 +269,11 @@ function drawNote(note) {
     }
 }
 
+// to practice part
+const go_practice_button = document.querySelector('.button_topage');
+go_practice_button.addEventListener('click', function() {
+    window.location.href = '../index.html';
+});
+
 
 
