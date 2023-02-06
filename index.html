@@ -19,8 +19,12 @@
 <div class="container">
 
     <!-- PIANO-->
-    <button id="1st">ShowAll</button>
-    <button id="2nd">HideAll</button>
+    <div class="show-hide">
+    <button id="1st">Show</button>
+        <div id="eye-svg">
+            <svg width="40" height="40" clip-rule="evenodd" fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m17.5 11c2.484 0 4.5 2.016 4.5 4.5s-2.016 4.5-4.5 4.5-4.5-2.016-4.5-4.5 2.016-4.5 4.5-4.5zm-5.346 6.999c-.052.001-.104.001-.156.001-4.078 0-7.742-3.093-9.854-6.483-.096-.159-.144-.338-.144-.517s.049-.358.145-.517c2.111-3.39 5.775-6.483 9.853-6.483 4.143 0 7.796 3.09 9.864 6.493.092.156.138.332.138.507 0 .179-.062.349-.15.516-.58-.634-1.297-1.14-2.103-1.472-1.863-2.476-4.626-4.544-7.749-4.544-3.465 0-6.533 2.632-8.404 5.5 1.815 2.781 4.754 5.34 8.089 5.493.09.529.25 1.034.471 1.506zm3.071-2.023 1.442 1.285c.095.085.215.127.333.127.136 0 .271-.055.37-.162l2.441-2.669c.088-.096.131-.217.131-.336 0-.274-.221-.499-.5-.499-.136 0-.271.055-.37.162l-2.108 2.304-1.073-.956c-.096-.085-.214-.127-.333-.127-.277 0-.5.224-.5.499 0 .137.056.273.167.372zm-3.603-.994c-2.031-.19-3.622-1.902-3.622-3.982 0-2.208 1.792-4 4-4 1.804 0 3.331 1.197 3.829 2.84-.493.146-.959.354-1.389.615-.248-1.118-1.247-1.955-2.44-1.955-1.38 0-2.5 1.12-2.5 2.5 0 1.363 1.092 2.472 2.448 2.499-.169.47-.281.967-.326 1.483z" fill-rule="nonzero"/></svg>
+        </div>
+    </div>
 
 
     <div class="piano-keys" id="piano">
@@ -182,7 +186,7 @@
 
                 <div class="button-container">
                     <button type="button" id="submit_mode" class="submitbutton">Chord</button>
-                    <button type="button" id="play_mode" class="playbutton">Play</button>
+<!--                    <button type="button" id="play_mode" class="playbutton">Play</button>-->
                 </div>
             </div>
 
@@ -228,7 +232,7 @@
             <option value="Augmented 3rd">Augmented 3rd</option>
         </select>
         <div class="chord-button">
-            <div class="button-container">
+            <div class="button-container key-button">
                 <button type="button" id="submit_chord" class="submitbutton">Chord</button>
                 <button type="button" id="play_chord" class="playbutton">Play</button>
             </div>
@@ -239,43 +243,7 @@
 </div>
 
 
-<div class="layout">
-    <div class="layout-center">
-        <div class="box">
-            <div class="box-header">
-                <span class="header-title">Practice</span>
-                <img class="icon-practice" src="icons/practice2.png">
-            </div>
-            <div class="box-menu">
-                <div class="picker">
-                    <select id="practice-type">
-                        <option value="Notes">Notes</option>
-                        <option value="Chords">Chords</option>
-                    </select>
-                </div>
-                <div class="button-group">
-                    <button id="button-practice">
-                        <img class="icon-practice" src="icons/practice.png">
-                        <span>Practice</span>
-                    </button>
-                </div>
-            </div>
-            <div class="box-body">
-                <canvas id="canvas"
-                        height="600px"
-                        width="800px">
-                </canvas>
-                <div id="app"></div>
-                <div id="app2"></div>
-            </div>
-        </div>
-    </div>
-</div>
-</div>
 
-<!--<script src="Practice.js" type="module"></script>-->
-<!--<script src="Timer.js" type="module"></script>-->
-<!--<script src="Lists.js" type="module"></script>-->
 
 
 
