@@ -126,7 +126,7 @@
     position: absolute;
     align-items: center;
     justify-content: center;
-    transform: translate(-18%, 0);
+    transform: translate(10%, 0);
     top: 45%;
     width: 28px;
     height: 28px;
@@ -146,7 +146,7 @@
     position: absolute;
     align-items: center;
     justify-content: center;
-    transform: translate(-18%, 0);
+    transform: translate(10%, 0);
     top: 70%;
     width: 28px;
     height: 28px;
