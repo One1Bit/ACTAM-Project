@@ -1166,6 +1166,58 @@ window.onload = function() {
 
 
 
+
+
+    let btn = document.getElementById("1st");
+    let btn2 = document.getElementById("2nd");
+    var buttons = document.querySelectorAll("button"),
+        i
+    for (i = 0; i < buttons.length; i++) {
+        buttons[i].addEventListener("click", function () {
+            for (var k = 0; k < this.children.length; k++) {
+                if (this.children[k].style.visibility === "visible") {
+                    console.log("visible")
+                    this.children[k].style.visibility = "hidden"
+                } else {
+                    console.log("hidden")
+                    this.children[k].style.visibility = "visible"
+                }
+                // this.children[k].style.visibility = "visible"
+                // console.log(k)
+                // this.children[k].classList.toggle("active")
+            }
+        })
+    }
+
+    btn.addEventListener("click", function() {
+        let elements = document.querySelectorAll("span");
+        for (let i = 0; i < elements.length; i++) {
+            elements[i].style.visibility = "visible";
+        }
+    });
+
+    btn2.addEventListener("click", function() {
+        let elements = document.querySelectorAll("span");
+        for (let i = 0; i < elements.length; i++) {
+            elements[i].style.visibility = "hidden";
+        }
+    });
+
+
+    function ShowAll(){
+
+        buttons.forEach(function(button) {
+            button.addEventListener("click", function() {
+                // 获取当前按钮的子元素
+                var children = button.children;
+                // 显示所有子元素
+                for (let i = 0; i < children.length; i++) {
+                    children[i].style.visibility = 'visible';
+                }
+            });
+        });
+    }
+
 }
 
 // piano
@@ -1179,6 +1231,9 @@ function playNote(note) {
         console.error(`Error playing ${note}.mp3: ${error}`);
     });
 }
+
+
+
 
 
 

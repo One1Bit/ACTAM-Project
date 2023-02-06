@@ -157,3 +157,13 @@
     text-align: center;
     visibility: hidden;
 }
+
+
+.key-label.active {
+    visibility: visible;
+    /* display: block; */
+}
+
+.hidden {
+    visibility: hidden;
+}
