@@ -3,15 +3,237 @@
 <head>
     <meta charset="UTF-8">
     <title>Chord Practice</title>
+    <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="./practice-box/index.css">
     <link rel="stylesheet" href="./practice-box/box-practice.css">
     <link rel="stylesheet" href="./practice-box/timer.css">
     <link rel="prefetch" href="icons/Whole.png">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="box_key.css">
+    <link rel="stylesheet" href="box_chord.css">
+    <link rel="stylesheet" href="piano.css">
+    <script src="box.js"></script>
+    <script src="piano.js"></script>
     <base href="/">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
 </head>
 <body>
-<div class="layout">
+<div class="container"></div>
+
+<!-- PIANO-->
+
+<div class="piano-keys" id="piano">
+    <button class="key-white" note="F3" onclick='playNote("F3")'>
+        <span class="key-label-sharp">E#</span>
+        <span class="key-label">F</span>
+    </button>
+    <button class="key-black" note="Fs3" onclick='playNote("Fs3")'>
+        <span class="key-label-black-sharp">F#</span>
+        <span class="key-label-black-flat">Gb</span>
+    </button>
+    <button class="key-white" note="G3" onclick='playNote("G3")'>
+        <span class="key-label">G</span>
+    </button>
+    <button class="key-black" note="Gs3" onclick='playNote("Gs3")'>
+        <span class="key-label-black-sharp">G#</span>
+        <span class="key-label-black-flat">Ab</span>
+    </button>
+    <button class="key-white" note="A3" onclick='playNote("A3")'>
+        <span class="key-label sharp">A</span>
+    </button>
+    <button class="key-black" note="As3" onclick='playNote("As3")'>
+        <span class="key-label-black-sharp">A#</span>
+        <span class="key-label-black-flat">Bb</span>
+    </button>
+    <button class="key-white" note="B3" onclick='playNote("B3")'>
+        <span class="key-label-sharp">Cb</span>
+        <span class="key-label">B</span>
+    </button>
+    <button class="key-white" note="C4" onclick='playNote("C4")'>
+        <span class="key-label-sharp">B#</span>
+        <span class="key-label">C</span>
+    </button>
+    <button class="key-black" note="Cs4" onclick='playNote("Cs4")'>
+        <span class="key-label-black-sharp">C#</span>
+        <span class="key-label-black-flat">Db</span>
+    </button>
+    <button class="key-white" note="D4" onclick='playNote("D4")'>
+        <span class="key-label">D</span>
+    </button>
+    <button class="key-black" note="Ds4" onclick='playNote("Ds4")'>
+        <span class="key-label-black-sharp">D#</span>
+        <span class="key-label-black-flat">Eb</span>
+    </button>
+    <button class="key-white" note="E4" onclick='playNote("E4")'>
+        <span class="key-label-sharp">Fb</span>
+        <span class="key-label">E</span>
+    </button>
+    <button class="key-white" note="F4" onclick='playNote("F4")'>
+        <span class="key-label-sharp">E#</span>
+        <span class="key-label">F</span>
+    </button>
+    <button class="key-black" note="Fs4" onclick='playNote("Fs4")'>
+        <span class="key-label-black-sharp">F#</span>
+        <span class="key-label-black-flat">Gb</span>
+    </button>
+    <button class="key-white" note="G4" onclick='playNote("G4")'>
+        <span class="key-label">G</span>
+    </button>
+    <button class="key-black" note="Gs4" onclick='playNote("Gs4")'>
+        <span class="key-label-black-sharp">G#</span>
+        <span class="key-label-black-flat">Ab</span>
+    </button>
+    <button class="key-white" note="A4" onclick='playNote("A4")'>
+        <span class="key-label">A</span>
+    </button>
+    <button class="key-black" note="As4" onclick='playNote("As4")'>
+        <span class="key-label-black-sharp">A#</span>
+        <span class="key-label-black-flat">Bb</span>
+    </button>
+    <button class="key-white" note="B4" onclick='playNote("B4")'>
+        <span class="key-label-sharp">Cb</span>
+        <span class="key-label">B</span>
+    </button>
+    <button class="key-white" note="C5" onclick='playNote("C5")'>
+        <span class="key-label-sharp">B#</span>
+        <span class="key-label">C</span>
+    </button>
+    <button class="key-black" note="Cs5" onclick='playNote("Cs5")'>
+        <span class="key-label-black-sharp">C#</span>
+        <span class="key-label-black-flat">Db</span>
+    </button>
+    <button class="key-white" note="D5" onclick='playNote("D5")'>
+        <span class="key-label">D</span>
+    </button>
+    <button class="key-black" note="Ds5" onclick='playNote("Ds5")'>
+        <span class="key-label-black-sharp">D#</span>
+        <span class="key-label-black-flat">Eb</span>
+    </button>
+    <button class="key-white" note="E5" onclick='playNote("E5")'>
+        <span class="key-label-sharp">Fb</span>
+        <span class="key-label">E</span>
+    </button>
+    <button class="key-white" note="F5" onclick='playNote("F5")'>
+        <span class="key-label-sharp">E#</span>
+        <span class="key-label">F</span>
+    </button>
+    <button class="key-black" note="Fs5" onclick='playNote("Fs5")'>
+        <span class="key-label-black-sharp">F#</span>
+        <span class="key-label-black-flat">Gb</span>
+    </button>
+    <button class="key-white" note="G5" onclick='playNote("G5")'>
+        <span class="key-label">G</span>
+    </button>
+    <button class="key-black" note="Gs5" onclick='playNote("Gs5")'>
+        <span class="key-label-black-sharp">G#</span>
+        <span class="key-label-black-flat">Ab</span>
+    </button>
+    <button class="key-white" note="A5" onclick='playNote("A5")'>
+        <span class="key-label">A</span>
+    </button>
+    <button class="key-black" note="As5" onclick='playNote("As5")'>
+        <span class="key-label-black-sharp">A#</span>
+        <span class="key-label-black-flat">Bb</span>
+    </button>
+    <button class="key-white" note="B5" onclick='playNote("B5")'>
+        <span class="key-label-sharp">Cb</span>
+        <span class="key-label">B</span>
+    </button>
+    <button class="key-white" note="D6" onclick='playNote("D6")'>
+        <span class="key-label-sharp">B#</span>
+        <span class="key-label">C</span>
+    </button>
+</div>
+
+
+<!-- KEY -->
+
+<div id="scale-box">
+    <div id="key-title">KEY</div>
+    <form>
+        <label for="key">Key:</label>
+        <select id="key">
+            <option value="C">C</option>
+            <option value="D">D</option>
+            <option value="E">E</option>
+            <option value="F">F</option>
+            <option value="G">G</option>
+            <option value="A">A</option>
+            <option value="B">B</option>
+        </select>
+        <label for="signature"></label>
+        <select id="signature">
+            <option value="Natural">Natural</option>
+            <option value="Sharp">Sharp</option>
+            <option value="Flat">Flat</option>
+        </select>
+        <label for="majmin"></label>
+        <select id="majmin">
+            <option value="Major">Major</option>
+            <option value="Minor">Minor</option>
+        </select>
+
+        <div class="key-button">
+            <div class="button-container">
+            <button type="button" id="submit_btn" class="submitbutton">Scale</button>
+            <button type="button" id="play_scale" class="playbutton">Play</button>
+            </div>
+
+            <div class="button-container">
+            <button type="button" id="submit_mode" class="submitbutton">Mode</button>
+            <button type="button" id="play_mode" class="playbutton">Play</button>
+            </div>
+        </div>
+
+    </form>
+
+    <div id="scale_in_key"></div>
+    <div id="mode_in_key"></div>
+
+
+</div>
+
+</div>
+
+<div id="chord-box">
+    <div id="chord-title">CHORD</div>
+    <form>
+        <label for="Chord">Chord:</label>
+        <select id="key-">
+            <option value="C">C</option>
+            <option value="D">D</option>
+            <option value="E">E</option>
+            <option value="F">F</option>
+            <option value="G">G</option>
+            <option value="A">A</option>
+            <option value="B">B</option>
+        </select>
+        <label for="signature-"></label>
+        <select id="signature-">
+            <option value="Natural">Natural</option>
+            <option value="Sharp">Sharp</option>
+            <option value="Flat">Flat</option>
+        </select>
+
+        <select id="Chord">
+            <option value="Triads">Triads</option>
+            <option value="Tetrads">Tetrads</option>
+        </select>
+
+        <select id="chord-select" >
+            <option value="Major 3rd">Major 3rd</option>
+            <option value="Minor 3rd">Minor 3rd</option>
+            <option value="Diminished 3rd">Diminished 3rd</option>
+            <option value="Augmented 3rd">Augmented 3rd</option>
+        </select>
+        <div class="chord-button">
+            <div class="button-container">
+        <button type="button" id="submit_chord" class="submitbutton">Chord</button>
+            <button type="button" id="play_chord" class="playbutton">Play</button>
+            </div>
+        </div>
+    </form>
+    <div id="chord-index"></div>
     <div class="layout-center">
         <div class="box">
             <div class="box-header">
@@ -42,9 +264,10 @@
             </div>
         </div>
     </div>
+
 </div>
 <script src="./practice-box/Practice.js" type="module"></script>
 <script src="./practice-box/Timer.js" type="module"></script>
-<script src="./practice-box/Lists.js" type="module"></script>
+<script src="./practice-box/Lists.js"
 </body>
 </html>
