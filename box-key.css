@@ -46,27 +46,53 @@
 
 .submitbutton{
     /* styles for the submit button */
-    background-color: #4CAF50; /* change the background color */
-    color: white; /* change the text color */
-    padding: 12px 20px; /* adjust the padding */
+    background-color: #f3a30d; /* change the background color */
+    color: #653a02; /* change the text color */
+    padding: 10px 20px; /* adjust the padding */
     border: none; /* remove the default border */
     border-radius: 10px; /* add rounded corners */
     cursor: pointer; /* change the cursor on hover */
     margin-left: 10px;
+    font: 18px 'Times New Roman', Times, serif;
+    font-weight: bold;
 }
+
+
+.submitbutton:hover{
+    background: #f34c04;
+    color: #050801;
+    box-shadow: 0 0 5px #f34c04,
+    0 0 25px #f34c04,
+    0 0 50px #f34c04,
+    0 0 200px #f34c04;
+}
+
+
 
 .playbutton{
     /* styles for the submit button */
-    background-color: #146201; /* change the background color */
-    color: white; /* change the text color */
+    background-color: #d5d8e5; /* change the background color */
+    color: #1a1c23; /* change the text color */
     padding: 10px 15px; /* adjust the padding */
     border: none; /* remove the default border */
     border-radius: 10px; /* add rounded corners */
     cursor: pointer; /* change the cursor on hover */
     margin-left: 10px;
-    font-size: 12px;
-
+    font-weight: bold;
+    font: 18px 'Times New Roman', Times, serif;
+    /*background-color: #8090b4;*/
 }
+
+
+.playbutton:hover{
+    background: #043cf3;
+    color: #050801;
+    box-shadow: 0 0 5px #043cf3,
+    0 0 25px #043cf3,
+    0 0 50px #043cf3,
+    0 0 200px #043cf3;
+}
+
 
 #scale_in_key {
     /* styles for the scale display */

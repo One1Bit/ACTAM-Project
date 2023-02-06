@@ -1,3 +1,29 @@
+
+
+.navbar {
+    position: absolute;
+    top: 0%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    weight:90%;
+    padding: 0 2000px;
+    background: linear-gradient(to bottom right, red, yellow);
+
+    font-weight: bold;
+    font-size: 25px;
+    letter-spacing: 5px;
+
+}
+.navbar a {
+    color: white;
+    text-decoration: none;
+    margin-right: 20px;
+}
+
+
+
 #piano-keyboard{
     position: absolute;
     top: 50%;
@@ -19,7 +45,7 @@
 
 .piano-keys {
     position: absolute;
-    top: 20%;
+    top: 25%;
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 1;
@@ -181,12 +207,52 @@
     height: 1px;
 }
 
-#to-practice-page{
+
+.topracticepage{
     position: absolute;
-    top: 5%;
+    top: 3.5%;
     right: 2%;
     display: flex;
     justify-content:left;
     align-items: center;
     height: 1px;
+
+}
+
+.button_topage{
+    padding: 5px 10px;
+    background-color: #050801;
+    color: #f34c04;
+    font-weight: bold;
+    font-size: 20px;
+    border: none;
+    border-radius: 5px;
+    letter-spacing: 2px;
+    overflow: hidden;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+
+
+.button_topage:hover{
+    background: #f34c04;
+    color: #050801;
+    box-shadow: 0 0 5px #f34c04,
+    0 0 25px #f34c04,
+    0 0 50px #f34c04,
+    0 0 200px #f34c04;
+    -webkit-box-reflect:below 1px linear-gradient(transparent, #0005);
+
+}
+
+.white{
+    fill:white;
+}
+
+.show-button{
+    border: none;
+    background-color: transparent;
+    color:white;
+    cursor: pointer;
 }
