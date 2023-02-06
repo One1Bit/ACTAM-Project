@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>ACTAM</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+      }
+      .piano-keys {
+        position: relative;
+        z-index: 1;
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        min-width: 924px;
+        height: 200px;
+        border-radius: 6px;
+        background: #eaedf0;
+        padding: 0;
+      }
+      .key-white {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 2;
+        width: 44px;
+        height: 100%;
+        border: 1px solid #e3e7eb;
+        background: #fff;
+        box-shadow: 1px 2px 3px #f2f4f5;
+        border-radius: 4px;
+      }
+      .key-black {
+        position: relative;
+        z-index: 3;
+        width: 34px;
+        height: 60%;
+        margin: 0 -17px;
+        border: 0;
+        background: #2c343d;
+        box-shadow: 1px 2px 3px rgb(44, 52, 61, 20%);
+        border-radius: 4px;
+      }
+      .key-white:hover {
+        cursor: pointer;
+        background-color: rgba(44, 52, 61, 0.05);
+        color: #2c343d;
+      }
+      .key-black:hover{
+        cursor: pointer;
+        background-color: rgb(101,115,133);
+        color: #2c343d;
+      }
+
+      .key-white:hover .key-label {
+        visibility: visible;
+      }
+      .key-white:hover .key-label-sharp {
+        visibility: visible;
+      }
+
+      .key-black:hover .key-label-black-flat {
+        visibility: visible;
+      }
+      .key-black:hover .key-label-black-sharp {
+        cursor: pointer;
+        visibility: visible;
+      }
+
+      .key-label {
+        display: flex;
+        position: absolute;
+        align-items: center;
+        justify-content: center;
+        top: 80%;
+        width: 28px;
+        height: 28px;
+
+        font-family: "Roboto", sans-serif;
+        font-size: 13px;
+        font-weight: 600;
+        line-height: 1;
+        color: black;
+        border-radius: 50%;
+        background-color: lightblue;
+        text-align: center;
+        visibility: hidden;
+      }
+      .key-label-sharp {
+        display: flex;
+        position: absolute;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        top: 65%;
+        width: 28px;
+        height: 28px;
+
+        font-family: "Roboto", sans-serif;
+        font-size: 13px;
+        font-weight: 600;
+        line-height: 1;
+        color: black;
+        border-radius: 50%;
+        background-color: lightblue;
+        text-align: center;
+        visibility: hidden;
+      }
+      .key-label-black-sharp {
+        display: flex;
+        position: absolute;
+        align-items: center;
+        justify-content: center;
+        transform: translate(10%, 0);
+        top: 45%;
+        width: 28px;
+        height: 28px;
+
+        font-family: "Roboto", sans-serif;
+        font-size: 13px;
+        font-weight: 600;
+        line-height: 1;
+        color: black;
+        border-radius: 50%;
+        background-color: lightblue;
+        text-align: center;
+        visibility: hidden;
+      }
+      .key-label-black-flat {
+        display: flex;
+        position: absolute;
+        align-items: center;
+        justify-content: center;
+        transform: translate(10%, 0);
+        top: 70%;
+        width: 28px;
+        height: 28px;
+
+        font-family: "Roboto", sans-serif;
+        font-size: 13px;
+        font-weight: 600;
+        line-height: 1;
+        color: black;
+        border-radius: 50%;
+        background-color: lightblue;
+        text-align: center;
+        visibility: hidden;
+      }
+
+      .key-label.active {
+        visibility: visible;
+        /* display: block; */
+      }
+
+      .hidden {
+        visibility: hidden;
+      }
+    </style>
+  </head>
+  <body>
+    <button id="1st">ShowAll</button>
+    <button id="2nd">HideAll</button>
+    <div class="piano-keys" id="piano">
+      <button class="key-white" onclick='playNote("F3")'>
+        <span class="key-label-sharp">E#</span>
+        <span class="key-label">F</span>
+      </button>
+      <button class="key-black" note="F3#" onclick='playNote("Fs3")'>
+        <span class="key-label-black-sharp">F#</span>
+        <span class="key-label-black-flat">Gb</span>
+      </button>
+      <button class="key-white" note="G3" onclick='playNote("G3")'>
+        <span class="key-label">G</span>
+      </button>
+      <button class="key-black" note="G3#" onclick='playNote("Gs3")'>
+        <span class="key-label-black-sharp">G#</span>
+        <span class="key-label-black-flat">Ab</span>
+      </button>
+      <button class="key-white" note="A3" onclick='playNote("A3")'>
+        <span class="key-label sharp">A</span>
+      </button>
+      <button class="key-black" note="A3#" onclick='playNote("As3")'>
+        <span class="key-label-black-sharp">A#</span>
+        <span class="key-label-black-flat">Bb</span>
+      </button>
+      <button class="key-white" note="B3" onclick='playNote("B3")'>
+        <span class="key-label-sharp">Cb</span>
+        <span class="key-label">B</span>
+      </button>
+      <button class="key-white" data-note="C4" onclick='playNote("C4")'>
+        <span class="key-label-sharp">B#</span>
+        <span class="key-label">C</span>
+      </button>
+      <button class="key-black" note="C4#" onclick='playNote("Cs4")'>
+        <span class="key-label-black-sharp">C#</span>
+        <span class="key-label-black-flat">Db</span>
+      </button>
+      <button class="key-white" note="D4" onclick='playNote("D4")'>
+        <span class="key-label">D</span>
+      </button>
+      <button class="key-black" note="D4#" onclick='playNote("Ds4")'>
+        <span class="key-label-black-sharp">D#</span>
+        <span class="key-label-black-flat">Eb</span>
+      </button>
+      <button class="key-white" note="E4" onclick='playNote("E4")'>
+        <span class="key-label-sharp">Fb</span>
+        <span class="key-label">E</span>
+      </button>
+      <button class="key-white" note="F4" onclick='playNote("F4")'>
+        <span class="key-label-sharp">E#</span>
+        <span class="key-label">F</span>
+      </button>
+      <button class="key-black" note="F4#" onclick='playNote("Fs4")'>
+        <span class="key-label-black-sharp">F#</span>
+        <span class="key-label-black-flat">Gb</span>
+      </button>
+      <button class="key-white" note="G4" onclick='playNote("G4")'>
+        <span class="key-label">G</span>
+      </button>
+      <button class="key-black" note="G4#" onclick='playNote("Gs4")'>
+        <span class="key-label-black-sharp">G#</span>
+        <span class="key-label-black-flat">Ab</span>
+      </button>
+      <button class="key-white" note="A4" onclick='playNote("A4")'>
+        <span class="key-label">A</span>
+      </button>
+      <button class="key-black" note="A4#" onclick='playNote("As4")'>
+        <span class="key-label-black-sharp">A#</span>
+        <span class="key-label-black-flat">Bb</span>
+      </button>
+      <button class="key-white" note="B4" onclick='playNote("B4")'>
+        <span class="key-label-sharp">Cb</span>
+        <span class="key-label">B</span>
+      </button>
+      <button class="key-white" note="C5" onclick='playNote("C5")'>
+        <span class="key-label-sharp">B#</span>
+        <span class="key-label">C</span>
+      </button>
+      <button class="key-black" note="C5#" onclick='playNote("Cs5")'>
+        <span class="key-label-black-sharp">C#</span>
+        <span class="key-label-black-flat">Db</span>
+      </button>
+      <button class="key-white" note="D5" onclick='playNote("D5")'>
+        <span class="key-label">D</span>
+      </button>
+      <button class="key-black" note="D5#" onclick='playNote("Ds5")'>
+        <span class="key-label-black-sharp">D#</span>
+        <span class="key-label-black-flat">Eb</span>
+      </button>
+      <button class="key-white" note="E5" onclick='playNote("E5")'>
+        <span class="key-label-sharp">Fb</span>
+        <span class="key-label">E</span>
+      </button>
+      <button class="key-white" note="F5" onclick='playNote("F5")'>
+        <span class="key-label-sharp">E#</span>
+        <span class="key-label">F</span>
+      </button>
+      <button class="key-black" note="F5#" onclick='playNote("Fs5")'>
+        <span class="key-label-black-sharp">F#</span>
+        <span class="key-label-black-flat">Gb</span>
+      </button>
+      <button class="key-white" note="G5" onclick='playNote("G5")'>
+        <span class="key-label">G</span>
+      </button>
+      <button class="key-black" note="G5#" onclick='playNote("Gs5")'>
+        <span class="key-label-black-sharp">G#</span>
+        <span class="key-label-black-flat">Ab</span>
+      </button>
+      <button class="key-white" note="A5" onclick='playNote("A5")'>
+        <span class="key-label">A</span>
+      </button>
+      <button class="key-black" note="A5#" onclick='playNote("As5")'>
+        <span class="key-label-black-sharp">A#</span>
+        <span class="key-label-black-flat">Bb</span>
+      </button>
+      <button class="key-white" note="B5" onclick='playNote("B5")'>
+        <span class="key-label-sharp">Cb</span>
+        <span class="key-label">B</span>
+      </button>
+      <button class="key-white" note="D6" onclick='playNote("D6")'>
+        <span class="key-label-sharp">B#</span>
+        <span class="key-label">C</span>
+      </button>
+      <button><a href="./Main-Jerry.html">跳转</a></button>
+    </div>
+    <script>
+      let btn = document.getElementById("1st");
+      let btn2 = document.getElementById("2nd");
+      var buttons = document.querySelectorAll("button"),
+        i
+      for (i = 0; i < buttons.length; i++) {
+        buttons[i].addEventListener("click", function () {
+          for (var k = 0; k < this.children.length; k++) {
+            if (this.children[k].style.visibility === "visible") {
+              console.log("visible")
+              this.children[k].style.visibility = "hidden"
+            } else {
+              console.log("hidden")
+              this.children[k].style.visibility = "visible"
+            }
+            // this.children[k].style.visibility = "visible"
+            // console.log(k)
+            // this.children[k].classList.toggle("active")
+          }
+        })
+      }
+      
+      btn.addEventListener("click", function() {
+      let elements = document.querySelectorAll("span");
+      for (let i = 0; i < elements.length; i++) {
+        elements[i].style.visibility = "visible";
+          }
+      });
+
+      btn2.addEventListener("click", function() {
+            let elements = document.querySelectorAll("span");
+            for (let i = 0; i < elements.length; i++) {
+              elements[i].style.visibility = "hidden";
+            }
+      });
+
+ /*     function hideall(){
+        document.getElementsByTagName("span").addEventListener("change", function() {
+        document.querySelectorAll("span").forEach(function(element) {
+            element.style.visibility = "hidden";
+        });
+      }}
+*/
+
+
+      function ShowAll(){
+      
+      buttons.forEach(function(button) {
+      button.addEventListener("click", function() {
+      // 获取当前按钮的子元素
+      var children = button.children;
+      // 显示所有子元素
+      for (let i = 0; i < children.length; i++) {
+        children[i].style.visibility = 'visible';
+      }
+    });
+  });
+}
+
+        
+      function playNote(note) {
+        var music = new Audio(`${note}.mp3`);
+        music.play()
+      }
+    </script>
+  </body>
+</html>
