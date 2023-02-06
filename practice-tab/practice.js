@@ -55,24 +55,58 @@ export function setRightClick(value) {
     rightClick = value;
 }
 window.addEventListener("keydown", matching);
-
+function dyingKeys(name){
+    document.querySelectorAll(`[note='${name}']`).forEach(function(element) {
+        if (element.classList.contains("key-white")) {
+            element.style.backgroundColor = "rgb(105,154,79)";
+            setTimeout(()=>
+            {element.style.backgroundColor = "rgb(255,255,255)";
+            }, 1500);
+        } else if (element.classList.contains("key-black")) {
+            element.style.backgroundColor = "rgb(10,101,22)";
+            setTimeout(()=>
+            {element.style.backgroundColor = "rgb(44,52,61)";
+            }, 1500);
+        }
+    });
+}
 function matching(e) {
+    searchIndex = keyList.findIndex((keyList) => keyList.shortcut === e.key);
+    let namePressedNote = keyList.at(searchIndex).note;
+    let nameCorrectNote = keyList.at(randomNote).note;
+
     if (PracticeOn === true) {
+
+        //practice-box
         //if (e.key !== keyList.at(randomNote).shortcut) {
         if (e.key === "1"){
             clearInterval(notesPracticingInterval);
             notesPracticingIteration();
             timer.createTextRight(keyList.at(randomNote).note);
-
+            //interacting with keyboard right choice
+            dyingKeys(nameCorrectNote);
         } else {
             clearInterval(textInterval);
-            searchIndex = keyList.findIndex((keyList) => keyList.shortcut === e.key);
             timer.createTextWrong(keyList.at(searchIndex).note);
             //if (counter<=numberOfPractice) {
             //    setTimeout(practiceIteration,timer.timeLeft*1000);
             //}
+            //interacting with keyboard wring choice
+            document.querySelectorAll(`[note='${namePressedNote}']`).forEach(function(element) {
+                element.style.backgroundColor = "rgb(159,29,52)";
+                setTimeout(()=>
+                {element.style.backgroundColor = "rgb(255,255,255)";
+                }, 1500);
+            });
+            document.querySelectorAll(`[note='${nameCorrectNote}']`).forEach(function(element) {
+                element.style.backgroundColor = "rgb(9,166,37)";
+                setTimeout(()=>
+                {element.style.backgroundColor = "rgb(255,255,255)";
+                }, 1500);
+            });
 
         }
+
         clearInterval(textInterval);
 
         textInterval = setInterval(() => {
@@ -231,31 +265,4 @@ function drawNote(note) {
 }
 
 
-///draw all whole notes
-/*
-    let nn=31;
-    for(let i=0;i<nn;i++){
-        if (i<17) {
-            drawNote(250 + 10 * i, 3 + 14.5 * i);
-        }
-        if (i>=17)
-        {
-            drawNote(250 + 10 * i,   14.5 * i + 14.5*2);
-        }//keyList.at(noteNumber).x  .y
-        console.log('1');
-    }//17 mid C
-/*
 
-function showHint(){
-    context.textAlign = "center";
-    context.font = "20px Arial";
-    context.fillStyle = "white";
-    context.fillText("15 120",50,57)
-}
-/*
-function tick(dt) {
-    renderStaff();
-    window.requestAnimationFrame(tick);
-}
-
-tick(0)*/

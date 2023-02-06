@@ -7,14 +7,206 @@
     <link rel="stylesheet" href="../practice-tab/box-practice.css">
     <link rel="stylesheet" href="../practice-tab/timer.css">
     <link rel="prefetch" href="../icons/Whole.png">
+    <link rel="stylesheet" href="../piano.css">
+    <script src="../box.js"></script>
 </head>
 <body>
 <div class="layout">
+    <div class="piano-keys" id="piano">
+        <button class="key-white" data-note="C2" onclick='playNote("C2")'>
+            <span class="key-label-sharp">B#</span>
+            <span class="key-label">C</span>
+        </button>
+        <button class="key-black" note="C#2" onclick='playNote("Cs2")'>
+            <span class="key-label-black-sharp">C#</span>
+            <span class="key-label-black-flat">Db</span>
+        </button>
+        <button class="key-white" note="D2" onclick='playNote("D2")'>
+            <span class="key-label">D</span>
+        </button>
+        <button class="key-black" note="D#2" onclick='playNote("Ds2")'>
+            <span class="key-label-black-sharp">D#</span>
+            <span class="key-label-black-flat">Eb</span>
+        </button>
+        <button class="key-white" note="E2" onclick='playNote("E2")'>
+            <span class="key-label-sharp">Fb</span>
+            <span class="key-label">E</span>
+        </button>
+        <button class="key-white" note="F2" onclick='playNote("F2")'>
+            <span class="key-label-sharp">E#</span>
+            <span class="key-label">F</span>
+            </button>
+
+            <button class="key-black" note="F#2" onclick='playNote("Fs2")'>
+                <span class="key-label-black-sharp">F#</span>
+                <span class="key-label-black-flat">Gb</span>
+            </button>
+            <button class="key-white" note="G2" onclick='playNote("G2")'>
+                <span class="key-label">G</span>
+            </button>
+            <button class="key-black" note="G#2" onclick='playNote("Gs2")'>
+                <span class="key-label-black-sharp">G#</span>
+                <span class="key-label-black-flat">Ab</span>
+            </button>
+            <button class="key-white" note="A2" onclick='playNote("A2")'>
+                <span class="key-label sharp">A</span>
+            </button>
+            <button class="key-black" note="A#2" onclick='playNote("As2")'>
+                <span class="key-label-black-sharp">A#</span>
+                <span class="key-label-black-flat">Bb</span>
+            </button>
+            <button class="key-white" note="B2" onclick='playNote("B2")'>
+                <span class="key-label-sharp">Cb</span>
+                <span class="key-label">B</span>
+            </button>
+            <button class="key-white" data-note="C3" onclick='playNote("C3")'>
+                <span class="key-label-sharp">B#</span>
+                <span class="key-label">C</span>
+            </button>
+            <button class="key-black" note="C#3" onclick='playNote("Cs3")'>
+                <span class="key-label-black-sharp">C#</span>
+                <span class="key-label-black-flat">Db</span>
+            </button>
+            <button class="key-white" note="D3" onclick='playNote("D3")'>
+                <span class="key-label">D</span>
+            </button>
+            <button class="key-black" note="D#3" onclick='playNote("Ds3")'>
+                <span class="key-label-black-sharp">D#</span>
+                <span class="key-label-black-flat">Eb</span>
+            </button>
+            <button class="key-white" note="E3" onclick='playNote("E3")'>
+                <span class="key-label-sharp">Fb</span>
+                <span class="key-label">E</span>
+            </button>
+            <button class="key-white" note="F3" onclick='playNote("F3")'>
+                <span class="key-label-sharp">E#</span>
+                <span class="key-label">F</span>
+            </button>
+
+                <button class="key-black" note="F#3" onclick='playNote("Fs3")'>
+                    <span class="key-label-black-sharp">F#</span>
+                    <span class="key-label-black-flat">Gb</span>
+                </button>
+                <button class="key-white" note="G3" onclick='playNote("G3")'>
+                    <span class="key-label">G</span>
+                </button>
+                <button class="key-black" note="G#3" onclick='playNote("Gs3")'>
+                    <span class="key-label-black-sharp">G#</span>
+                    <span class="key-label-black-flat">Ab</span>
+                </button>
+                <button class="key-white" note="A3" onclick='playNote("A3")'>
+                    <span class="key-label sharp">A</span>
+                </button>
+                <button class="key-black" note="A#3" onclick='playNote("As3")'>
+                    <span class="key-label-black-sharp">A#</span>
+                    <span class="key-label-black-flat">Bb</span>
+                </button>
+                <button class="key-white" note="B3" onclick='playNote("B3")'>
+                    <span class="key-label-sharp">Cb</span>
+                    <span class="key-label">B</span>
+                </button>
+                <button class="key-white" data-note="C4" onclick='playNote("C4")'>
+                    <span class="key-label-sharp">B#</span>
+                    <span class="key-label">C</span>
+                </button>
+                <button class="key-black" note="C#4" onclick='playNote("Cs4")'>
+                    <span class="key-label-black-sharp">C#</span>
+                    <span class="key-label-black-flat">Db</span>
+                </button>
+                <button class="key-white" note="D4" onclick='playNote("D4")'>
+                    <span class="key-label">D</span>
+                </button>
+                <button class="key-black" note="D#4" onclick='playNote("Ds4")'>
+                    <span class="key-label-black-sharp">D#</span>
+                    <span class="key-label-black-flat">Eb</span>
+                </button>
+                <button class="key-white" note="E4" onclick='playNote("E4")'>
+                    <span class="key-label-sharp">Fb</span>
+                    <span class="key-label">E</span>
+                </button>
+                <button class="key-white" note="F4" onclick='playNote("F4")'>
+                    <span class="key-label-sharp">E#</span>
+                    <span class="key-label">F</span>
+                </button>
+                <button class="key-black" note="F#4" onclick='playNote("Fs4")'>
+                    <span class="key-label-black-sharp">F#</span>
+                    <span class="key-label-black-flat">Gb</span>
+                </button>
+                <button class="key-white" note="G4" onclick='playNote("G4")'>
+                    <span class="key-label">G</span>
+                </button>
+                <button class="key-black" note="G#4" onclick='playNote("Gs4")'>
+                    <span class="key-label-black-sharp">G#</span>
+                    <span class="key-label-black-flat">Ab</span>
+                </button>
+                <button class="key-white" note="A4" onclick='playNote("A4")'>
+                    <span class="key-label">A</span>
+                </button>
+                <button class="key-black" note="A#4" onclick='playNote("As4")'>
+                    <span class="key-label-black-sharp">A#</span>
+                    <span class="key-label-black-flat">Bb</span>
+                </button>
+                <button class="key-white" note="B4" onclick='playNote("B4")'>
+                    <span class="key-label-sharp">Cb</span>
+                    <span class="key-label">B</span>
+                </button>
+                <button class="key-white" note="C5" onclick='playNote("C5")'>
+                    <span class="key-label-sharp">B#</span>
+                    <span class="key-label">C</span>
+                </button>
+                <button class="key-black" note="C#5" onclick='playNote("Cs5")'>
+                    <span class="key-label-black-sharp">C#</span>
+                    <span class="key-label-black-flat">Db</span>
+                </button>
+                <button class="key-white" note="D5" onclick='playNote("D5")'>
+                    <span class="key-label">D</span>
+                </button>
+                <button class="key-black" note="D#5" onclick='playNote("Ds5")'>
+                    <span class="key-label-black-sharp">D#</span>
+                    <span class="key-label-black-flat">Eb</span>
+                </button>
+                <button class="key-white" note="E5" onclick='playNote("E5")'>
+                    <span class="key-label-sharp">Fb</span>
+                    <span class="key-label">E</span>
+                </button>
+                <button class="key-white" note="F5" onclick='playNote("F5")'>
+                    <span class="key-label-sharp">E#</span>
+                    <span class="key-label">F</span>
+                </button>
+                <button class="key-black" note="F#5" onclick='playNote("Fs5")'>
+                    <span class="key-label-black-sharp">F#</span>
+                    <span class="key-label-black-flat">Gb</span>
+                </button>
+                <button class="key-white" note="G5" onclick='playNote("G5")'>
+                    <span class="key-label">G</span>
+                </button>
+                <button class="key-black" note="G#5" onclick='playNote("Gs5")'>
+                    <span class="key-label-black-sharp">G#</span>
+                    <span class="key-label-black-flat">Ab</span>
+                </button>
+                <button class="key-white" note="A5" onclick='playNote("A5")'>
+                    <span class="key-label">A</span>
+                </button>
+                <button class="key-black" note="A#5" onclick='playNote("As5")'>
+                    <span class="key-label-black-sharp">A#</span>
+                    <span class="key-label-black-flat">Bb</span>
+                </button>
+                <button class="key-white" note="B5" onclick='playNote("B5")'>
+                    <span class="key-label-sharp">Cb</span>
+                    <span class="key-label">B</span>
+                </button>
+
+                <button class="key-white" note="C6" onclick='playNote("C6")'>
+                    <span class="key-label-sharp">B#</span>
+                    <span class="key-label">C</span>
+                </button>
+    </div>
+
     <div class="layout-center">
         <div class="box">
             <div class="box-header">
                 <span class="header-title">Practice</span>
-                <img class="icon-practice" src="../icons/practice2.png">
+                <img class="icon-practice" title="Something" src="../icons/practice2.png">
             </div>
             <div class="box-menu">
                 <div class="picker">
@@ -44,5 +236,6 @@
 <script src="../practice-tab/practice.js" type="module"></script>
 <script src="../practice-tab/timer.js" type="module"></script>
 <script src="../practice-tab/lists.js" type="module"></script>
+<script src="../practice-tab/piano.js" type="module"></script>
 </body>
 </html>
