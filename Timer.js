@@ -65,6 +65,12 @@ export function startTimer() {
     timeLeft=TIME_LIMIT;
     document.getElementById("app").style.display = 'block';
     timerInterval = setInterval(() => {
+        if (timeLeft<0)
+        {
+            clearInterval(timerInterval);
+            document.getElementById("app").style.display = 'none';
+
+        }
         timePassed = timePassed + 1;
         //if (rightClick===false){
         //    setRightClick(true);

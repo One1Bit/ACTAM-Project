@@ -1,5 +1,6 @@
-import { keyList } from "./Lists.js";
-import * as timer from"./Timer.js";
+import {keyList} from "./Lists.js";
+import * as timer from "./Timer.js";
+
 function randomElement(notes){
     return Math.floor(Math.random() * notes.length);
 }
@@ -32,8 +33,10 @@ let counter;
 let randomNote;
 let PracticeOn=false;
 let textInterval=null;
-let practiceInterval=null;
+let notesPracticingInterval=null;
+let chordsPracticingInterval=null;
 let delay=timer.TIME_LIMIT*1000;
+let searchIndex;
 window.onload = function() {
     renderStaff();
     drawSupportLines();
@@ -42,7 +45,7 @@ window.onload = function() {
         if(PracticeOn===false) {
             PracticeOn = true;
             counter = 0;
-            startPractice();
+            startPracticing();
         }
     }
 }
@@ -57,27 +60,29 @@ function matching(e) {
     if (PracticeOn === true) {
         //if (e.key !== keyList.at(randomNote).shortcut) {
         if (e.key === "1"){
-            clearInterval(practiceInterval);
-            practiceIteration();
-            clearInterval(textInterval);
-            const searchIndex = keyList.findIndex((keyList) => keyList.shortcut === e.key);
-            timer.createTextRight(keyList.at(searchIndex).note);
-            textInterval = setInterval(() => {
-                timer.deleteElements()
-            }, 2000);
+            clearInterval(notesPracticingInterval);
+            notesPracticingIteration();
+            timer.createTextRight(keyList.at(randomNote).note);
+
         } else {
-            timer.createTextWrong(keyList.at(randomNote).note);
-            setTimeout(timer.deleteElements, 1000);
+            clearInterval(textInterval);
+            searchIndex = keyList.findIndex((keyList) => keyList.shortcut === e.key);
+            timer.createTextWrong(keyList.at(searchIndex).note);
             //if (counter<=numberOfPractice) {
             //    setTimeout(practiceIteration,timer.timeLeft*1000);
             //}
 
         }
+        clearInterval(textInterval);
+
+        textInterval = setInterval(() => {
+            timer.deleteElements()
+        }, 2000);
     } else {
         return false
     }
 }
-function practiceIteration() {
+function notesPracticingIteration() {
 
     if (counter<=numberOfPractice) {
         counter++;
@@ -93,19 +98,52 @@ function practiceIteration() {
     }
     else
     {
-        clearInterval(practiceInterval);
+        clearInterval(notesPracticingInterval);
         document.getElementById("app").style.display = 'none';
         PracticeOn=false;
     }
 }
-function startPractice(){
-    if (PracticeOn===true) {
-        practiceIteration();
+function chordsPracticingIteration(notes){
+    if (counter<=numberOfPractice) {
         counter++;
-        practiceInterval=setInterval(practiceIteration,delay)
-        console.log('42');
+        for(let i =0;i<notes.length;i++){
+            drawNote(randomNote);
+        }
+    }
+    else
+    {
+        clearInterval(chordsPracticingInterval);
+        document.getElementById("app").style.display = 'none';
+        PracticeOn=false;
     }
 }
+function startPracticing(){
+    let chord="C E G#";
+    let notes = chord.split(' ');
+
+
+    if (PracticeOn===true) {
+        //Notes
+        if (document.getElementById("practice-type").options.selectedIndex === 0) {
+            notesPracticingIteration();
+            counter++;
+            notesPracticingInterval=setInterval(notesPracticingIteration,delay)
+            console.log('42');
+        }
+        //Chords
+        else if (document.getElementById("practice-type").options.selectedIndex === 1) {
+                chordsPracticingIteration(notes);
+                counter++;
+                chordsPracticingInterval=setInterval(chordsPracticingIteration,delay)
+                console.log('42');
+            }
+        }
+        else {
+            console.log("Err is in window.onload choosing practice type")
+        }
+
+    }
+
 /*
 function startPractice(){
         if (PracticeOn===true) {
