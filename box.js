@@ -172,6 +172,22 @@ window.onload = function() {
     }
     );
 
+
+
+    // index-part: when click Scale button, Play button shows
+    document.getElementById("submit_btn").addEventListener("click", function() {
+        document.getElementById("play_scale").style.display = "block";
+    });
+    document.getElementById("play_scale").style.display = "none";
+
+    // index-part: when click Mode button, Play button shows
+    document.getElementById("submit_mode").addEventListener("click", function() {
+        document.getElementById("play_mode").style.display = "block";
+    });
+    document.getElementById("play_mode").style.display = "none";
+
+
+
     // key - play audio
    function playScale() {
         const scale_notes = scaleInKey.innerHTML.split(" ");
@@ -253,9 +269,9 @@ window.onload = function() {
                // change key color
                document.querySelectorAll(`[note='${modified_scale_notes[i]}${octave[i]}']`).forEach(function(element) {
                    if (element.classList.contains("key-white")) {
-                       element.style.backgroundColor = "rgb(229, 166, 166)";
+                       element.style.backgroundColor = "rgb(187,229,166)";
                    } else if (element.classList.contains("key-black")) {
-                       element.style.backgroundColor = "rgb(122,16,41)";
+                       element.style.backgroundColor = "rgb(10,101,22)";
                    }
                });
            }, 400 * i);
@@ -442,6 +458,8 @@ window.onload = function() {
     );
 
     // update part
+
+
     document.getElementById("key").addEventListener("change", function() {
         document.getElementById("scale_in_key").innerHTML = "";
         document.getElementById("mode_in_key").innerHTML = "";
@@ -460,6 +478,7 @@ window.onload = function() {
         document.getElementById("scale_in_key").innerHTML = "";
         document.getElementById("mode_in_key").innerHTML = "";
         document.getElementById("play_scale").style.display = "none";
+        // key color reset
         document.querySelectorAll(".key-white").forEach(function(element) {
             element.style.backgroundColor = "white";
         });
@@ -473,6 +492,7 @@ window.onload = function() {
         document.getElementById("scale_in_key").innerHTML = "";
         document.getElementById("mode_in_key").innerHTML = "";
         document.getElementById("play_scale").style.display = "none";
+        // key color reset
         document.querySelectorAll(".key-white").forEach(function(element) {
             element.style.backgroundColor = "white";
         });
@@ -1063,13 +1083,23 @@ window.onload = function() {
                 // change key color
                 document.querySelectorAll(`[note='${modified_chord_notes[i]}${octave_chord[i]}']`).forEach(function (element) {
                     if (element.classList.contains("key-white")) {
-                        element.style.backgroundColor = "rgb(229, 166, 166)";
+                        element.style.backgroundColor = "rgb(187,229,166)";
                     } else if (element.classList.contains("key-black")) {
-                        element.style.backgroundColor = "rgb(122,16,41)";
+                        element.style.backgroundColor = "rgb(10,101,22)";
                     }
                 });
             }, 0);
         }
+
+        setTimeout(function() {
+            document.querySelectorAll(".key-white").forEach(function(element) {
+                element.style.backgroundColor = "white";
+            });
+
+            document.querySelectorAll(".key-black").forEach(function(element) {
+                element.style.backgroundColor = "black";
+            });
+        }, 2000);
     }
 
 
@@ -1086,18 +1116,51 @@ window.onload = function() {
     document.getElementById("key-").addEventListener("change", function() {
         document.getElementById("chord-index").innerHTML = "";
         document.getElementById("play_chord").style.display = "none";
+        // key color reset
+        document.querySelectorAll(".key-white").forEach(function(element) {
+            element.style.backgroundColor = "white";
+        });
+
+        document.querySelectorAll(".key-black").forEach(function(element) {
+            element.style.backgroundColor = "black";
+        });
+
     });
     document.getElementById("signature-").addEventListener("change", function() {
         document.getElementById("chord-index").innerHTML = "";
         document.getElementById("play_chord").style.display = "none";
+        // key color reset
+        document.querySelectorAll(".key-white").forEach(function(element) {
+            element.style.backgroundColor = "white";
+        });
+
+        document.querySelectorAll(".key-black").forEach(function(element) {
+            element.style.backgroundColor = "black";
+        });
     });
     document.getElementById("Chord").addEventListener("change", function() {
         document.getElementById("chord-index").innerHTML = "";
         document.getElementById("play_chord").style.display = "none";
+        // key color reset
+        document.querySelectorAll(".key-white").forEach(function(element) {
+            element.style.backgroundColor = "white";
+        });
+
+        document.querySelectorAll(".key-black").forEach(function(element) {
+            element.style.backgroundColor = "black";
+        });
     });
     document.getElementById("chord-select").addEventListener("change", function() {
         document.getElementById("chord-index").innerHTML = "";
         document.getElementById("play_chord").style.display = "none";
+        // key color reset
+        document.querySelectorAll(".key-white").forEach(function(element) {
+            element.style.backgroundColor = "white";
+        });
+
+        document.querySelectorAll(".key-black").forEach(function(element) {
+            element.style.backgroundColor = "black";
+        });
     });
 
 
