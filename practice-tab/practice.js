@@ -27,7 +27,7 @@ let index = selectItem.selectedIndex;
 selectItem.addEventListener('change', () => {
     index = selectItem.selectedIndex;
 })*/
-
+k
 let numberOfPractice=5;
 let counter;
 let randomNote;
@@ -249,6 +249,7 @@ function drawSupportLines(){
 function drawNote(note) {
     context.clearRect(0, 0, canvas.width, canvas.height);
     context.drawImage(imgStaff, 0, 60, 700, 400)
+
     drawSupportLines();
     let c = keyList.at(note).position;
     console.log(c);
