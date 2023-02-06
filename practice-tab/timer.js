@@ -77,7 +77,7 @@ export function startTimer() {
         //    clearInterval(timerInterval);
         //}
         //else{
-            timeLeft = TIME_LIMIT - timePassed;
+        timeLeft = TIME_LIMIT - timePassed;
         //}
 
         document.getElementById("base-timer-label").innerHTML = formatTime(

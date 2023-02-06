@@ -1,5 +1,5 @@
 export const keyList = [
-   //// 2 octave ///
+    //// 2 octave ///
     {
         note: "C2",
         enharmonic: "B#2",
@@ -537,4 +537,3 @@ export const keyList = [
         position: 2,
     },
 ];
-

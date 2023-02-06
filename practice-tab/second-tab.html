@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chord Practice</title>
+    <link rel="stylesheet" href="../practice-tab/index.css">
+    <link rel="stylesheet" href="../practice-tab/box-practice.css">
+    <link rel="stylesheet" href="../practice-tab/timer.css">
+    <link rel="prefetch" href="../icons/Whole.png">
+</head>
+<body>
+<div class="layout">
+    <div class="layout-center">
+        <div class="box">
+            <div class="box-header">
+                <span class="header-title">Practice</span>
+                <img class="icon-practice" src="../icons/practice2.png">
+            </div>
+            <div class="box-menu">
+                <div class="picker">
+                    <select id="practice-type">
+                        <option value="Notes">Notes</option>
+                        <option value="Chords">Chords</option>
+                    </select>
+                </div>
+                <div class="button-group">
+                    <button id="button-practice">
+                        <img class="icon-practice" src="../icons/practice.png">
+                        <span>Practice</span>
+                    </button>
+                </div>
+            </div>
+            <div class="box-body">
+                <canvas id="canvas"
+                        height="600px"
+                        width="800px">
+                </canvas>
+                <div id="app"></div>
+                <div id="app2"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="../practice-tab/practice.js" type="module"></script>
+<script src="../practice-tab/timer.js" type="module"></script>
+<script src="../practice-tab/lists.js" type="module"></script>
+</body>
+</html>

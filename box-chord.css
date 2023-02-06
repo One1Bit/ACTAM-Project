@@ -4,7 +4,7 @@
     top: 60%;
     right: 12%;
     width: 35%;
-    height: 43%;
+    height: 45%;
     transform: translate(0%, -50%);
     background-color: #f2f2f2; /* add a background color */
     border-radius: 10px; /* add rounded corners */
@@ -40,10 +40,12 @@
 
 .chord-button{
     margin-top: 5px;
+
 }
 
 #chord-index {
-    margin-top: 60px; /* add space above the scale */
+    margin-top: 100px; /* add space above the scale */
     color: #333; /* change the text color */
     font: 2vw 'Times New Roman', Times, serif;
+
 }

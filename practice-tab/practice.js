@@ -1,5 +1,5 @@
-import {keyList} from "./Lists.js";
-import * as timer from "./Timer.js";
+import {keyList} from "./lists.js";
+import * as timer from "./timer.js";
 
 function randomElement(notes){
     return Math.floor(Math.random() * notes.length);
@@ -9,16 +9,16 @@ function randomElement(notes){
 const canvas = document.getElementById("canvas");
 const context = canvas.getContext("2d");
 let imgStaff = new Image();
-imgStaff.src = "icons/staff2.png";
+imgStaff.src = "../icons/staff2.png";
 let imgWhole = new Image();
-imgWhole.src = "icons/Whole.png";
+imgWhole.src = "../icons/Whole.png";
 let imgFlat = new Image();
-imgFlat.src = "icons/flat.png";
+imgFlat.src = "../icons/flat.png";
 let imgSharp = new Image();
-imgSharp.src = "icons/sharp.png";
+imgSharp.src = "../icons/sharp.png";
 
 function renderStaff(){
-   context.drawImage(imgStaff,0,60,700,400)
+    context.drawImage(imgStaff,0,60,700,400)
 }
 renderStaff();
 /*
@@ -132,17 +132,17 @@ function startPracticing(){
         }
         //Chords
         else if (document.getElementById("practice-type").options.selectedIndex === 1) {
-                chordsPracticingIteration(notes);
-                counter++;
-                chordsPracticingInterval=setInterval(chordsPracticingIteration,delay)
-                console.log('42');
-            }
+            chordsPracticingIteration(notes);
+            counter++;
+            chordsPracticingInterval=setInterval(chordsPracticingIteration,delay)
+            console.log('42');
         }
-        else {
-            console.log("Err is in window.onload choosing practice type")
-        }
-
     }
+    else {
+        console.log("Err is in window.onload choosing practice type")
+    }
+
+}
 
 /*
 function startPractice(){

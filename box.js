@@ -75,101 +75,101 @@ window.onload = function() {
 
     ///////////////// Key ///////////////////
     submitBtn.addEventListener("click", function () {
-        const keyValue = key.value;
-        const signatureValue = signature.value;
-        const majminValue = majmin.value;
+            const keyValue = key.value;
+            const signatureValue = signature.value;
+            const majminValue = majmin.value;
 
-        if (keyValue === "C" && signatureValue === "Natural" && majminValue === "Major") {
-            scaleInKey.innerHTML = "C D E F G A B";
-        } else if (keyValue === "D" && signatureValue === "Natural" && majminValue === "Major") {
-            scaleInKey.innerHTML = "D E F# G A B C#";
-        } else if (keyValue === "E" && signatureValue === "Natural" && majminValue === "Major") {
-            scaleInKey.innerHTML = "E F# G# A B C# D#";
-        } else if (keyValue === "F" && signatureValue === "Natural" && majminValue === "Major") {
-            scaleInKey.innerHTML = "F G A Bb C D E";
-        }else if (keyValue === "G" && signatureValue === "Natural" && majminValue === "Major") {
-            scaleInKey.innerHTML = "G A B C D E F#";
-        } else if (keyValue === "A" && signatureValue === "Natural" && majminValue === "Major") {
-            scaleInKey.innerHTML = "A B C# D E F# G#";
-        } else if (keyValue === "B" && signatureValue === "Natural" && majminValue === "Major") {
-            scaleInKey.innerHTML = "B C# D# E F# G# A#";
+            if (keyValue === "C" && signatureValue === "Natural" && majminValue === "Major") {
+                scaleInKey.innerHTML = "C D E F G A B";
+            } else if (keyValue === "D" && signatureValue === "Natural" && majminValue === "Major") {
+                scaleInKey.innerHTML = "D E F# G A B C#";
+            } else if (keyValue === "E" && signatureValue === "Natural" && majminValue === "Major") {
+                scaleInKey.innerHTML = "E F# G# A B C# D#";
+            } else if (keyValue === "F" && signatureValue === "Natural" && majminValue === "Major") {
+                scaleInKey.innerHTML = "F G A Bb C D E";
+            }else if (keyValue === "G" && signatureValue === "Natural" && majminValue === "Major") {
+                scaleInKey.innerHTML = "G A B C D E F#";
+            } else if (keyValue === "A" && signatureValue === "Natural" && majminValue === "Major") {
+                scaleInKey.innerHTML = "A B C# D E F# G#";
+            } else if (keyValue === "B" && signatureValue === "Natural" && majminValue === "Major") {
+                scaleInKey.innerHTML = "B C# D# E F# G# A#";
 
-        } else if (keyValue === "C" && signatureValue === "Sharp" && majminValue === "Major") {
-            scaleInKey.innerHTML = "C# D# E# F# G# A# B#";
-        } else if (keyValue === "D" && signatureValue === "Sharp" && majminValue === "Major") {
-            scaleInKey.innerHTML = "D# E# F## G# A# B# C##";
-        } else if (keyValue === "E" && signatureValue === "Sharp" && majminValue === "Major") {
-            scaleInKey.innerHTML = "E# F## G## A# B# C## D##";
-        } else if (keyValue === "F" && signatureValue === "Sharp" && majminValue === "Major") {
-            scaleInKey.innerHTML = "F# G# A# B C# D# E#";
-        } else if (keyValue === "G" && signatureValue === "Sharp" && majminValue === "Major") {
-            scaleInKey.innerHTML = "G# A# B# C# D# E# F##";
-        } else if (keyValue === "A" && signatureValue === "Sharp" && majminValue === "Major") {
-            scaleInKey.innerHTML = "A# B# C## D# E# F## G##";
-        } else if (keyValue === "B" && signatureValue === "Sharp" && majminValue === "Major") {
-            scaleInKey.innerHTML = "B# C## D## E# F## G## A##";
+            } else if (keyValue === "C" && signatureValue === "Sharp" && majminValue === "Major") {
+                scaleInKey.innerHTML = "C# D# E# F# G# A# B#";
+            } else if (keyValue === "D" && signatureValue === "Sharp" && majminValue === "Major") {
+                scaleInKey.innerHTML = "D# E# F## G# A# B# C##";
+            } else if (keyValue === "E" && signatureValue === "Sharp" && majminValue === "Major") {
+                scaleInKey.innerHTML = "E# F## G## A# B# C## D##";
+            } else if (keyValue === "F" && signatureValue === "Sharp" && majminValue === "Major") {
+                scaleInKey.innerHTML = "F# G# A# B C# D# E#";
+            } else if (keyValue === "G" && signatureValue === "Sharp" && majminValue === "Major") {
+                scaleInKey.innerHTML = "G# A# B# C# D# E# F##";
+            } else if (keyValue === "A" && signatureValue === "Sharp" && majminValue === "Major") {
+                scaleInKey.innerHTML = "A# B# C## D# E# F## G##";
+            } else if (keyValue === "B" && signatureValue === "Sharp" && majminValue === "Major") {
+                scaleInKey.innerHTML = "B# C## D## E# F## G## A##";
 
-        } else if (keyValue === "C" && signatureValue === "Flat" && majminValue === "Major") {
-            scaleInKey.innerHTML = "Cb Db Eb Fb Gb Ab Bb";
-        } else if (keyValue === "D" && signatureValue === "Flat" && majminValue === "Major") {
-            scaleInKey.innerHTML = "Db Eb F Gb Ab Bb C";
-        } else if (keyValue === "E" && signatureValue === "Flat" && majminValue === "Major") {
-            scaleInKey.innerHTML = "Eb F G Ab Bb C D";
-        } else if (keyValue === "F" && signatureValue === "Flat" && majminValue === "Major") {
-            scaleInKey.innerHTML = "Fb Gb Ab Bbb Cb Db Eb";
-        } else if (keyValue === "G" && signatureValue === "Flat" && majminValue === "Major") {
-            scaleInKey.innerHTML = "Gb Ab Bb Cb Db Eb F";
-        } else if (keyValue === "A" && signatureValue === "Flat" && majminValue === "Major") {
-            scaleInKey.innerHTML = "Ab Bb C Db Eb F G";
-        } else if (keyValue === "B" && signatureValue === "Flat" && majminValue === "Major") {
-            scaleInKey.innerHTML = "Bb C D Eb F G A";
+            } else if (keyValue === "C" && signatureValue === "Flat" && majminValue === "Major") {
+                scaleInKey.innerHTML = "Cb Db Eb Fb Gb Ab Bb";
+            } else if (keyValue === "D" && signatureValue === "Flat" && majminValue === "Major") {
+                scaleInKey.innerHTML = "Db Eb F Gb Ab Bb C";
+            } else if (keyValue === "E" && signatureValue === "Flat" && majminValue === "Major") {
+                scaleInKey.innerHTML = "Eb F G Ab Bb C D";
+            } else if (keyValue === "F" && signatureValue === "Flat" && majminValue === "Major") {
+                scaleInKey.innerHTML = "Fb Gb Ab Bbb Cb Db Eb";
+            } else if (keyValue === "G" && signatureValue === "Flat" && majminValue === "Major") {
+                scaleInKey.innerHTML = "Gb Ab Bb Cb Db Eb F";
+            } else if (keyValue === "A" && signatureValue === "Flat" && majminValue === "Major") {
+                scaleInKey.innerHTML = "Ab Bb C Db Eb F G";
+            } else if (keyValue === "B" && signatureValue === "Flat" && majminValue === "Major") {
+                scaleInKey.innerHTML = "Bb C D Eb F G A";
 
-        } else if (keyValue === "C" && signatureValue === "Natural" && majminValue === "Minor") {
-            scaleInKey.innerHTML = "C D Eb F G Ab Bb";
-        } else if (keyValue === "D" && signatureValue === "Natural" && majminValue === "Minor") {
-            scaleInKey.innerHTML = "D E F G A Bb C";
-        } else if (keyValue === "E" && signatureValue === "Natural" && majminValue === "Minor") {
-            scaleInKey.innerHTML = "E F# G A B C D";
-        } else if (keyValue === "F" && signatureValue === "Natural" && majminValue === "Minor") {
-            scaleInKey.innerHTML = "F G Ab Bb C Db Eb";
-        } else if (keyValue === "G" && signatureValue === "Natural" && majminValue === "Minor") {
-            scaleInKey.innerHTML = "G A Bb C D Eb F";
-        } else if (keyValue === "A" && signatureValue === "Natural" && majminValue === "Minor") {
-            scaleInKey.innerHTML = "A B C D E F G";
-        } else if (keyValue === "B" && signatureValue === "Natural" && majminValue === "Minor") {
-            scaleInKey.innerHTML = "B C# D E F# G A";
+            } else if (keyValue === "C" && signatureValue === "Natural" && majminValue === "Minor") {
+                scaleInKey.innerHTML = "C D Eb F G Ab Bb";
+            } else if (keyValue === "D" && signatureValue === "Natural" && majminValue === "Minor") {
+                scaleInKey.innerHTML = "D E F G A Bb C";
+            } else if (keyValue === "E" && signatureValue === "Natural" && majminValue === "Minor") {
+                scaleInKey.innerHTML = "E F# G A B C D";
+            } else if (keyValue === "F" && signatureValue === "Natural" && majminValue === "Minor") {
+                scaleInKey.innerHTML = "F G Ab Bb C Db Eb";
+            } else if (keyValue === "G" && signatureValue === "Natural" && majminValue === "Minor") {
+                scaleInKey.innerHTML = "G A Bb C D Eb F";
+            } else if (keyValue === "A" && signatureValue === "Natural" && majminValue === "Minor") {
+                scaleInKey.innerHTML = "A B C D E F G";
+            } else if (keyValue === "B" && signatureValue === "Natural" && majminValue === "Minor") {
+                scaleInKey.innerHTML = "B C# D E F# G A";
 
-        } else if (keyValue === "C" && signatureValue === "Sharp" && majminValue === "Minor") {
-            scaleInKey.innerHTML = "C# D# E F# G# A B";
-        } else if (keyValue === "D" && signatureValue === "Sharp" && majminValue === "Minor") {
-            scaleInKey.innerHTML = "D# E# F# G# A# B C#";
-        } else if (keyValue === "E" && signatureValue === "Sharp" && majminValue === "Minor") {
-            scaleInKey.innerHTML = "E# F## G# A# B# C# D#";
-        } else if (keyValue === "F" && signatureValue === "Sharp" && majminValue === "Minor") {
-            scaleInKey.innerHTML = "F# G# A B C# D E";
-        } else if (keyValue === "G" && signatureValue === "Sharp" && majminValue === "Minor") {
-            scaleInKey.innerHTML = "G# A# B C# D# E F#";
-        } else if (keyValue === "A" && signatureValue === "Sharp" && majminValue === "Minor") {
-            scaleInKey.innerHTML = "A# B# C# D# E# F# G#";
-        } else if (keyValue === "B" && signatureValue === "Sharp" && majminValue === "Minor") {
-            scaleInKey.innerHTML = "B# C## D# E# F## G# A#";
+            } else if (keyValue === "C" && signatureValue === "Sharp" && majminValue === "Minor") {
+                scaleInKey.innerHTML = "C# D# E F# G# A B";
+            } else if (keyValue === "D" && signatureValue === "Sharp" && majminValue === "Minor") {
+                scaleInKey.innerHTML = "D# E# F# G# A# B C#";
+            } else if (keyValue === "E" && signatureValue === "Sharp" && majminValue === "Minor") {
+                scaleInKey.innerHTML = "E# F## G# A# B# C# D#";
+            } else if (keyValue === "F" && signatureValue === "Sharp" && majminValue === "Minor") {
+                scaleInKey.innerHTML = "F# G# A B C# D E";
+            } else if (keyValue === "G" && signatureValue === "Sharp" && majminValue === "Minor") {
+                scaleInKey.innerHTML = "G# A# B C# D# E F#";
+            } else if (keyValue === "A" && signatureValue === "Sharp" && majminValue === "Minor") {
+                scaleInKey.innerHTML = "A# B# C# D# E# F# G#";
+            } else if (keyValue === "B" && signatureValue === "Sharp" && majminValue === "Minor") {
+                scaleInKey.innerHTML = "B# C## D# E# F## G# A#";
 
-        } else if (keyValue === "C" && signatureValue === "Flat" && majminValue === "Minor") {
-            scaleInKey.innerHTML = "Cb Db Ebb Fb Gb Abb Bbb";
-        } else if (keyValue === "D" && signatureValue === "Flat" && majminValue === "Minor") {
-            scaleInKey.innerHTML = "Db Eb Fb Gb Ab Bbb Cb";
-        } else if (keyValue === "E" && signatureValue === "Flat" && majminValue === "Minor") {
-            scaleInKey.innerHTML = "Eb F Gb Ab Bb Cb Db";
-        } else if (keyValue === "F" && signatureValue === "Flat" && majminValue === "Minor") {
-            scaleInKey.innerHTML = "Fb Gb Abb Bbb Cb Dbb Ebb";
-        } else if (keyValue === "G" && signatureValue === "Flat" && majminValue === "Minor") {
-            scaleInKey.innerHTML = "Gb Ab Bbb Cb Db Ebb Fb";
-        } else if (keyValue === "A" && signatureValue === "Flat" && majminValue === "Minor") {
-            scaleInKey.innerHTML = "Ab Bb Cb Db Eb Fb Gb";
-        } else if (keyValue === "B" && signatureValue === "Flat" && majminValue === "Minor") {
-            scaleInKey.innerHTML = "Bb C Db Eb F Gb Ab";
+            } else if (keyValue === "C" && signatureValue === "Flat" && majminValue === "Minor") {
+                scaleInKey.innerHTML = "Cb Db Ebb Fb Gb Abb Bbb";
+            } else if (keyValue === "D" && signatureValue === "Flat" && majminValue === "Minor") {
+                scaleInKey.innerHTML = "Db Eb Fb Gb Ab Bbb Cb";
+            } else if (keyValue === "E" && signatureValue === "Flat" && majminValue === "Minor") {
+                scaleInKey.innerHTML = "Eb F Gb Ab Bb Cb Db";
+            } else if (keyValue === "F" && signatureValue === "Flat" && majminValue === "Minor") {
+                scaleInKey.innerHTML = "Fb Gb Abb Bbb Cb Dbb Ebb";
+            } else if (keyValue === "G" && signatureValue === "Flat" && majminValue === "Minor") {
+                scaleInKey.innerHTML = "Gb Ab Bbb Cb Db Ebb Fb";
+            } else if (keyValue === "A" && signatureValue === "Flat" && majminValue === "Minor") {
+                scaleInKey.innerHTML = "Ab Bb Cb Db Eb Fb Gb";
+            } else if (keyValue === "B" && signatureValue === "Flat" && majminValue === "Minor") {
+                scaleInKey.innerHTML = "Bb C Db Eb F Gb Ab";
+            }
         }
-    }
     );
 
 
@@ -182,114 +182,114 @@ window.onload = function() {
 
     // index-part: when click Mode button, Play button shows
     document.getElementById("submit_mode").addEventListener("click", function() {
-        document.getElementById("play_mode").style.display = "block";
+        //   document.getElementById("play_mode").style.display = "block";
     });
-    document.getElementById("play_mode").style.display = "none";
+    //document.getElementById("play_mode").style.display = "none";
 
 
 
     // key - play audio
-   function playScale() {
+    function playScale() {
         const scale_notes = scaleInKey.innerHTML.split(" ");
         console.log(scale_notes);
 
-       const modified_scale_notes = scale_notes.map(note => note_map[note] || note);
-       modified_scale_notes.push(modified_scale_notes[0]);
-       console.log(modified_scale_notes);
+        const modified_scale_notes = scale_notes.map(note => note_map[note] || note);
+        modified_scale_notes.push(modified_scale_notes[0]);
+        console.log(modified_scale_notes);
 
 
-       let octave = [];
-       let firstNote = modified_scale_notes[0];
-       if  (modified_scale_notes[0] === "Cs"&&
-           modified_scale_notes[1] === "Ds"&&
-           modified_scale_notes[2] === "F"&&
-           modified_scale_notes[3] === "Fs"&&
-           modified_scale_notes[4] === "Gs"&&
-           modified_scale_notes[5] === "As"&&
-           modified_scale_notes[6] === "C"
-       ) {
-           octave = [4, 4, 4, 4, 4, 4, 5, 5];
-       } else if  (modified_scale_notes[0] === "Ds"&&
-           modified_scale_notes[1] === "F"&&
-           modified_scale_notes[2] === "G"&&
-           modified_scale_notes[3] === "Gs"&&
-           modified_scale_notes[4] === "As"&&
-           modified_scale_notes[5] === "C"&&
-           modified_scale_notes[6] === "D"
-       ) {
-               octave = [4, 4, 4, 4, 4, 5, 5, 5];
-       } else if  (modified_scale_notes[0] === "Gs"&&
-           modified_scale_notes[1] === "As"&&
-           modified_scale_notes[2] === "C"&&
-           modified_scale_notes[3] === "Cs"&&
-           modified_scale_notes[4] === "Ds"&&
-           modified_scale_notes[5] === "F"&&
-           modified_scale_notes[6] === "G"
-       ) {
-           octave = [4, 4, 5, 5, 5, 5, 5, 5];
-       } else if  (modified_scale_notes[0] === "As"&&
-           modified_scale_notes[1] === "C"&&
-           modified_scale_notes[2] === "D"&&
-           modified_scale_notes[3] === "Ds"&&
-           modified_scale_notes[4] === "F"&&
-           modified_scale_notes[5] === "G"&&
-           modified_scale_notes[6] === "A"
-       ) {
-           octave = [4, 5, 5, 5, 5, 5, 5, 5];
-       } else if  (modified_scale_notes[0] === "As"&&
-           modified_scale_notes[1] === "C"&&
-           modified_scale_notes[2] === "Cs"&&
-           modified_scale_notes[3] === "Ds"&&
-           modified_scale_notes[4] === "F"&&
-           modified_scale_notes[5] === "Fs"&&
-           modified_scale_notes[6] === "Gs"
-       ) {
-           octave = [4, 5, 5, 5, 5, 5, 5, 5];
-       } else if (firstNote === "C"|| firstNote === "Cs") {
-           octave = [4, 4, 4, 4, 4, 4, 4, 5];
-       } else if (firstNote === "D"|| firstNote === "Ds") {
-           octave = [4, 4, 4, 4, 4, 4, 5, 5];
-       } else if (firstNote === "E"|| firstNote === "Es") {
-           octave = [4, 4, 4, 4, 4, 5, 5, 5];
-       } else if (firstNote === "F"|| firstNote === "Fs") {
-           octave = [4, 4, 4, 4, 5, 5, 5, 5];
-       } else if (firstNote === "G"|| firstNote === "Gs") {
-           octave = [4, 4, 4, 5, 5, 5, 5, 5];
-       } else if (firstNote === "A"|| firstNote === "As") {
-           octave = [4, 4, 5, 5, 5, 5, 5, 5];
-       } else if (firstNote === "B"|| firstNote === "Bs") {
-           octave = [4, 5, 5, 5, 5, 5, 5, 5];
-       }
+        let octave = [];
+        let firstNote = modified_scale_notes[0];
+        if  (modified_scale_notes[0] === "Cs"&&
+            modified_scale_notes[1] === "Ds"&&
+            modified_scale_notes[2] === "F"&&
+            modified_scale_notes[3] === "Fs"&&
+            modified_scale_notes[4] === "Gs"&&
+            modified_scale_notes[5] === "As"&&
+            modified_scale_notes[6] === "C"
+        ) {
+            octave = [4, 4, 4, 4, 4, 4, 5, 5];
+        } else if  (modified_scale_notes[0] === "Ds"&&
+            modified_scale_notes[1] === "F"&&
+            modified_scale_notes[2] === "G"&&
+            modified_scale_notes[3] === "Gs"&&
+            modified_scale_notes[4] === "As"&&
+            modified_scale_notes[5] === "C"&&
+            modified_scale_notes[6] === "D"
+        ) {
+            octave = [4, 4, 4, 4, 4, 5, 5, 5];
+        } else if  (modified_scale_notes[0] === "Gs"&&
+            modified_scale_notes[1] === "As"&&
+            modified_scale_notes[2] === "C"&&
+            modified_scale_notes[3] === "Cs"&&
+            modified_scale_notes[4] === "Ds"&&
+            modified_scale_notes[5] === "F"&&
+            modified_scale_notes[6] === "G"
+        ) {
+            octave = [4, 4, 5, 5, 5, 5, 5, 5];
+        } else if  (modified_scale_notes[0] === "As"&&
+            modified_scale_notes[1] === "C"&&
+            modified_scale_notes[2] === "D"&&
+            modified_scale_notes[3] === "Ds"&&
+            modified_scale_notes[4] === "F"&&
+            modified_scale_notes[5] === "G"&&
+            modified_scale_notes[6] === "A"
+        ) {
+            octave = [4, 5, 5, 5, 5, 5, 5, 5];
+        } else if  (modified_scale_notes[0] === "As"&&
+            modified_scale_notes[1] === "C"&&
+            modified_scale_notes[2] === "Cs"&&
+            modified_scale_notes[3] === "Ds"&&
+            modified_scale_notes[4] === "F"&&
+            modified_scale_notes[5] === "Fs"&&
+            modified_scale_notes[6] === "Gs"
+        ) {
+            octave = [4, 5, 5, 5, 5, 5, 5, 5];
+        } else if (firstNote === "C"|| firstNote === "Cs") {
+            octave = [4, 4, 4, 4, 4, 4, 4, 5];
+        } else if (firstNote === "D"|| firstNote === "Ds") {
+            octave = [4, 4, 4, 4, 4, 4, 5, 5];
+        } else if (firstNote === "E"|| firstNote === "Es") {
+            octave = [4, 4, 4, 4, 4, 5, 5, 5];
+        } else if (firstNote === "F"|| firstNote === "Fs") {
+            octave = [4, 4, 4, 4, 5, 5, 5, 5];
+        } else if (firstNote === "G"|| firstNote === "Gs") {
+            octave = [4, 4, 4, 5, 5, 5, 5, 5];
+        } else if (firstNote === "A"|| firstNote === "As") {
+            octave = [4, 4, 5, 5, 5, 5, 5, 5];
+        } else if (firstNote === "B"|| firstNote === "Bs") {
+            octave = [4, 5, 5, 5, 5, 5, 5, 5];
+        }
 
 
-       for (let i = 0; i < modified_scale_notes.length; i++) {
-           setTimeout(() => {
-               // play audio
-               playNote(`${modified_scale_notes[i]}${octave[i]}`);
-               // change key color
-               document.querySelectorAll(`[note='${modified_scale_notes[i]}${octave[i]}']`).forEach(function(element) {
-                   if (element.classList.contains("key-white")) {
-                       element.style.backgroundColor = "rgb(187,229,166)";
-                   } else if (element.classList.contains("key-black")) {
-                       element.style.backgroundColor = "rgb(10,101,22)";
-                   }
-               });
-           }, 400 * i);
+        for (let i = 0; i < modified_scale_notes.length; i++) {
+            setTimeout(() => {
+                // play audio
+                playNote(`${modified_scale_notes[i]}${octave[i]}`);
+                // change key color
+                document.querySelectorAll(`[note='${modified_scale_notes[i]}${octave[i]}']`).forEach(function(element) {
+                    if (element.classList.contains("key-white")) {
+                        element.style.backgroundColor = "rgb(187,229,166)";
+                    } else if (element.classList.contains("key-black")) {
+                        element.style.backgroundColor = "rgb(10,101,22)";
+                    }
+                });
+            }, 400 * i);
 
-           }
+        }
 
-       setTimeout(function() {
-           document.querySelectorAll(".key-white").forEach(function(element) {
-               element.style.backgroundColor = "white";
-           });
+        setTimeout(function() {
+            document.querySelectorAll(".key-white").forEach(function(element) {
+                element.style.backgroundColor = "white";
+            });
 
-           document.querySelectorAll(".key-black").forEach(function(element) {
-               element.style.backgroundColor = "black";
-           });
-       }, 4500);
+            document.querySelectorAll(".key-black").forEach(function(element) {
+                element.style.backgroundColor = "black";
+            });
+        }, 4500);
 
 
-   }
+    }
 
 
 
@@ -306,7 +306,7 @@ window.onload = function() {
 
 
 
-  // mode
+    // mode
     function formatModes(numbers, notes) {
         let modes = "";
         for (let i = 0; i < notes.length; i++) {
@@ -364,96 +364,96 @@ window.onload = function() {
                 notes = ["B#maj7", "C##m7", "D##m7", "E#maj7", "F##7", "G##m7", "A##m7b5"];
             }
 
-        else if (keyValue === "C" && signatureValue === "Flat" && majminValue === "Major") {
-            notes = ["Cbmaj7","Dbm7", "Ebm7", "Fbmaj7", "Gb7", "Abm7", "Bbm7b5"];
-        }
-        else if (keyValue === "D" && signatureValue === "Flat" && majminValue === "Major") {
-            notes = ["Dbmaj7", "Ebm7", "Fm7", "Gbmaj7", "Ab7", "Bbm7", "Cm7b5"];
-        }
-        else if (keyValue === "E" && signatureValue === "Flat" && majminValue === "Major") {
-            notes = ["Ebmaj7", "Fm7", "Gm7", "Abmaj7", "Bb7", "Cm7", "Dm7b5"];
-        }
-        else if (keyValue === "F" && signatureValue === "Flat" && majminValue === "Major") {
-            notes = ["Fbmaj7", "Gbm7", "Abm7", "Bbbmaj7", "Cb7", "Dbm7", "Ebm7b5"];
-        }
-        else if (keyValue === "G" && signatureValue === "Flat" && majminValue === "Major") {
-            notes = ["Gbmaj7", "Abm7", "Bbm7", "Cbmaj7", "Db7", "Ebm7", "Fm7b5"];
-        }
-        else if (keyValue === "A" && signatureValue === "Flat" && majminValue === "Major") {
-            notes = ["Abmaj7", "Bbm7", "Cm7", "Dbmaj7", "Eb7", "Fm7", "Gm7b5"];
-        }
-        else if (keyValue === "B" && signatureValue === "Flat" && majminValue === "Major") {
-            notes = ["Bbmaj7", "Cm7", "Dm7", "Ebmaj7", "F7", "Gm7", "Am7b5"];
-        }
+            else if (keyValue === "C" && signatureValue === "Flat" && majminValue === "Major") {
+                notes = ["Cbmaj7","Dbm7", "Ebm7", "Fbmaj7", "Gb7", "Abm7", "Bbm7b5"];
+            }
+            else if (keyValue === "D" && signatureValue === "Flat" && majminValue === "Major") {
+                notes = ["Dbmaj7", "Ebm7", "Fm7", "Gbmaj7", "Ab7", "Bbm7", "Cm7b5"];
+            }
+            else if (keyValue === "E" && signatureValue === "Flat" && majminValue === "Major") {
+                notes = ["Ebmaj7", "Fm7", "Gm7", "Abmaj7", "Bb7", "Cm7", "Dm7b5"];
+            }
+            else if (keyValue === "F" && signatureValue === "Flat" && majminValue === "Major") {
+                notes = ["Fbmaj7", "Gbm7", "Abm7", "Bbbmaj7", "Cb7", "Dbm7", "Ebm7b5"];
+            }
+            else if (keyValue === "G" && signatureValue === "Flat" && majminValue === "Major") {
+                notes = ["Gbmaj7", "Abm7", "Bbm7", "Cbmaj7", "Db7", "Ebm7", "Fm7b5"];
+            }
+            else if (keyValue === "A" && signatureValue === "Flat" && majminValue === "Major") {
+                notes = ["Abmaj7", "Bbm7", "Cm7", "Dbmaj7", "Eb7", "Fm7", "Gm7b5"];
+            }
+            else if (keyValue === "B" && signatureValue === "Flat" && majminValue === "Major") {
+                notes = ["Bbmaj7", "Cm7", "Dm7", "Ebmaj7", "F7", "Gm7", "Am7b5"];
+            }
 
-        else if (keyValue === "C" && signatureValue === "Natural" && majminValue === "Minor") {
-            notes = ["Cm7","Dm7b5", "Ebmaj7", "Fm7", "Gm7", "Abmaj7", "Bb7"];
-        }
-        else if (keyValue === "D" && signatureValue === "Natural" && majminValue === "Minor") {
-            notes = ["Dm7", "Em7b5", "Fmaj7", "Gm7", "Am7", "Bbmaj7", "C7"];
-        }
-        else if (keyValue === "E" && signatureValue === "Natural" && majminValue === "Minor") {
-            notes = ["Em7", "F#m7b5", "Gmaj7", "Am7", "Bm7", "Cmaj7", "D7"];
-        }
-        else if (keyValue === "F" && signatureValue === "Natural" && majminValue === "Minor") {
-            notes = ["Fm7", "Gm7b5", "Abmaj7", "Bbm7", "Cm7", "Dbmaj7", "Eb7"];
-        }
-        else if (keyValue === "G" && signatureValue === "Natural" && majminValue === "Minor") {
-            notes = ["Gm7", "Am7b5", "Bbmaj7", "Cm7", "Dm7", "Ebmaj7", "F7"];
-        }
-        else if (keyValue === "A" && signatureValue === "Natural" && majminValue === "Minor") {
-            notes = ["Am7", "Bm7b5", "Cmaj7", "Dm7", "Em7", "Fmaj7", "G7"];
-        }
-        else if (keyValue === "B" && signatureValue === "Natural" && majminValue === "Minor") {
-            notes = ["Bm7", "C#m7b5", "Dmaj7", "Em7", "F#m7", "Gmaj7", "A7"];
-        }
+            else if (keyValue === "C" && signatureValue === "Natural" && majminValue === "Minor") {
+                notes = ["Cm7","Dm7b5", "Ebmaj7", "Fm7", "Gm7", "Abmaj7", "Bb7"];
+            }
+            else if (keyValue === "D" && signatureValue === "Natural" && majminValue === "Minor") {
+                notes = ["Dm7", "Em7b5", "Fmaj7", "Gm7", "Am7", "Bbmaj7", "C7"];
+            }
+            else if (keyValue === "E" && signatureValue === "Natural" && majminValue === "Minor") {
+                notes = ["Em7", "F#m7b5", "Gmaj7", "Am7", "Bm7", "Cmaj7", "D7"];
+            }
+            else if (keyValue === "F" && signatureValue === "Natural" && majminValue === "Minor") {
+                notes = ["Fm7", "Gm7b5", "Abmaj7", "Bbm7", "Cm7", "Dbmaj7", "Eb7"];
+            }
+            else if (keyValue === "G" && signatureValue === "Natural" && majminValue === "Minor") {
+                notes = ["Gm7", "Am7b5", "Bbmaj7", "Cm7", "Dm7", "Ebmaj7", "F7"];
+            }
+            else if (keyValue === "A" && signatureValue === "Natural" && majminValue === "Minor") {
+                notes = ["Am7", "Bm7b5", "Cmaj7", "Dm7", "Em7", "Fmaj7", "G7"];
+            }
+            else if (keyValue === "B" && signatureValue === "Natural" && majminValue === "Minor") {
+                notes = ["Bm7", "C#m7b5", "Dmaj7", "Em7", "F#m7", "Gmaj7", "A7"];
+            }
 
-        else if (keyValue === "C" && signatureValue === "Sharp" && majminValue === "Minor") {
-            notes = ["C#m7","D#m7b5", "Emaj7", "F#m7", "G#m7", "Amaj7", "B7"];
-        }
-        else if (keyValue === "D" && signatureValue === "Sharp" && majminValue === "Minor") {
-            notes = ["D#m7", "E#m7b5", "F#maj7", "G#m7", "A#m7", "Bmaj7", "C#7"];
-        }
-        else if (keyValue === "E" && signatureValue === "Sharp" && majminValue === "Minor") {
-            notes = ["E#m7", "F##m7b5", "G#maj7", "A#m7", "B#m7", "C#maj7", "D#7"];
-        }
-        else if (keyValue === "F" && signatureValue === "Sharp" && majminValue === "Minor") {
-            notes = ["F#m7", "G#m7b5", "Amaj7", "Bm7", "C#m7", "Dmaj7", "E7"];
-        }
-        else if (keyValue === "G" && signatureValue === "Sharp" && majminValue === "Minor") {
-            notes = ["G#m7", "A#m7b5", "Bmaj7", "C#m7", "D#m7", "Emaj7", "F#7"];
-        }
-        else if (keyValue === "A" && signatureValue === "Sharp" && majminValue === "Minor") {
-            notes = ["A#m7", "B#m7b5", "C#maj7", "D#m7", "E#m7", "F#maj7", "G#7"];
-        }
-        else if (keyValue === "B" && signatureValue === "Sharp" && majminValue === "Minor") {
-            notes = ["B#m7", "C##m7b5", "D#maj7", "E#m7", "F##m7", "G#maj7", "A#7"];
-        }
+            else if (keyValue === "C" && signatureValue === "Sharp" && majminValue === "Minor") {
+                notes = ["C#m7","D#m7b5", "Emaj7", "F#m7", "G#m7", "Amaj7", "B7"];
+            }
+            else if (keyValue === "D" && signatureValue === "Sharp" && majminValue === "Minor") {
+                notes = ["D#m7", "E#m7b5", "F#maj7", "G#m7", "A#m7", "Bmaj7", "C#7"];
+            }
+            else if (keyValue === "E" && signatureValue === "Sharp" && majminValue === "Minor") {
+                notes = ["E#m7", "F##m7b5", "G#maj7", "A#m7", "B#m7", "C#maj7", "D#7"];
+            }
+            else if (keyValue === "F" && signatureValue === "Sharp" && majminValue === "Minor") {
+                notes = ["F#m7", "G#m7b5", "Amaj7", "Bm7", "C#m7", "Dmaj7", "E7"];
+            }
+            else if (keyValue === "G" && signatureValue === "Sharp" && majminValue === "Minor") {
+                notes = ["G#m7", "A#m7b5", "Bmaj7", "C#m7", "D#m7", "Emaj7", "F#7"];
+            }
+            else if (keyValue === "A" && signatureValue === "Sharp" && majminValue === "Minor") {
+                notes = ["A#m7", "B#m7b5", "C#maj7", "D#m7", "E#m7", "F#maj7", "G#7"];
+            }
+            else if (keyValue === "B" && signatureValue === "Sharp" && majminValue === "Minor") {
+                notes = ["B#m7", "C##m7b5", "D#maj7", "E#m7", "F##m7", "G#maj7", "A#7"];
+            }
 
-        else if (keyValue === "C" && signatureValue === "Flat" && majminValue === "Minor") {
-            notes = ["Cbm7","Dbm7b5", "Ebbmaj7", "Fbm7", "Gbm7", "Abbmaj7", "Bbb7"];
-        }
-        else if (keyValue === "D" && signatureValue === "Flat" && majminValue === "Minor") {
-            notes = ["Dbm7", "Ebm7b5", "Fbmaj7", "Gbm7", "Abm7", "Bbbmaj7", "Cb7"];
-        }
-        else if (keyValue === "E" && signatureValue === "Flat" && majminValue === "Minor") {
-            notes = ["Ebm7", "Fm7b5", "Gbmaj7", "Abm7", "Bbm7", "Cbmaj7", "Db7"];
-        }
-        else if (keyValue === "F" && signatureValue === "Flat" && majminValue === "Minor") {
-            notes = ["Fbm7", "Gbm7b5", "Abbmaj7", "Bbbm7", "Cbm7", "Dbbmaj7", "Ebb7"];
-        }
-        else if (keyValue === "G" && signatureValue === "Flat" && majminValue === "Minor") {
-            notes = ["Gbm7", "Abm7b5", "Bbbmaj7", "Cbm7", "Dbm7", "Ebbmaj7", "Fb7"];
-        }
-        else if (keyValue === "A" && signatureValue === "Flat" && majminValue === "Minor") {
-            notes = ["Abm7", "Bbm7b5", "Cbmaj7", "Dbm7", "Ebm7", "Fbmaj7", "Gb7"];
-        }
-        else if (keyValue === "B" && signatureValue === "Flat" && majminValue === "Minor") {
-            notes = ["Bbm7", "Cm7b5", "Dbmaj7", "Ebm7", "Fm7", "Gbmaj7", "Ab7"];
-        }
+            else if (keyValue === "C" && signatureValue === "Flat" && majminValue === "Minor") {
+                notes = ["Cbm7","Dbm7b5", "Ebbmaj7", "Fbm7", "Gbm7", "Abbmaj7", "Bbb7"];
+            }
+            else if (keyValue === "D" && signatureValue === "Flat" && majminValue === "Minor") {
+                notes = ["Dbm7", "Ebm7b5", "Fbmaj7", "Gbm7", "Abm7", "Bbbmaj7", "Cb7"];
+            }
+            else if (keyValue === "E" && signatureValue === "Flat" && majminValue === "Minor") {
+                notes = ["Ebm7", "Fm7b5", "Gbmaj7", "Abm7", "Bbm7", "Cbmaj7", "Db7"];
+            }
+            else if (keyValue === "F" && signatureValue === "Flat" && majminValue === "Minor") {
+                notes = ["Fbm7", "Gbm7b5", "Abbmaj7", "Bbbm7", "Cbm7", "Dbbmaj7", "Ebb7"];
+            }
+            else if (keyValue === "G" && signatureValue === "Flat" && majminValue === "Minor") {
+                notes = ["Gbm7", "Abm7b5", "Bbbmaj7", "Cbm7", "Dbm7", "Ebbmaj7", "Fb7"];
+            }
+            else if (keyValue === "A" && signatureValue === "Flat" && majminValue === "Minor") {
+                notes = ["Abm7", "Bbm7b5", "Cbmaj7", "Dbm7", "Ebm7", "Fbmaj7", "Gb7"];
+            }
+            else if (keyValue === "B" && signatureValue === "Flat" && majminValue === "Minor") {
+                notes = ["Bbm7", "Cm7b5", "Dbmaj7", "Ebm7", "Fm7", "Gbmaj7", "Ab7"];
+            }
 
 
-        ModeInKey.innerHTML = formatModes(numbers, notes);
+            ModeInKey.innerHTML = formatModes(numbers, notes);
         }
     );
 
@@ -548,11 +548,11 @@ window.onload = function() {
             } else if (key_Value === "E" && signature_Value === "Natural" && ChordValue === "Triads" && chords_electValue ==="Major 3rd") {
                 ChordInKey.innerHTML = "E G# B";
             } else if (key_Value === "F" && signature_Value === "Natural" && ChordValue === "Triads" && chords_electValue ==="Major 3rd") {
-                    ChordInKey.innerHTML = "F A C";
+                ChordInKey.innerHTML = "F A C";
             } else if (key_Value === "G" && signature_Value === "Natural" && ChordValue === "Triads" && chords_electValue ==="Major 3rd") {
                 ChordInKey.innerHTML = "G B D";
             } else if (key_Value === "A" && signature_Value === "Natural" && ChordValue === "Triads" && chords_electValue ==="Major 3rd") {
-                        ChordInKey.innerHTML = "A C# E";
+                ChordInKey.innerHTML = "A C# E";
             } else if (key_Value === "B" && signature_Value === "Natural" && ChordValue === "Triads" && chords_electValue ==="Major 3rd") {
                 ChordInKey.innerHTML = "B D# F#";
 
@@ -588,7 +588,7 @@ window.onload = function() {
 
 
             } else if (key_Value === "C" && signature_Value === "Natural" && ChordValue === "Triads" && chords_electValue ==="Minor 3rd") {
-                    ChordInKey.innerHTML = "C Eb G";
+                ChordInKey.innerHTML = "C Eb G";
             } else if (key_Value === "D" && signature_Value === "Natural" && ChordValue === "Triads" && chords_electValue ==="Minor 3rd") {
                 ChordInKey.innerHTML = "D F A";
             } else if (key_Value === "E" && signature_Value === "Natural" && ChordValue === "Triads" && chords_electValue ==="Minor 3rd") {
@@ -679,7 +679,7 @@ window.onload = function() {
                 ChordInKey.innerHTML = "Bb Db Fb";
 
             } else if (key_Value === "C" && signature_Value === "Natural" && ChordValue === "Triads" && chords_electValue ==="Augmented 3rd") {
-                    ChordInKey.innerHTML = "C E G#";
+                ChordInKey.innerHTML = "C E G#";
             } else if (key_Value === "D" && signature_Value === "Natural" && ChordValue === "Triads" && chords_electValue ==="Augmented 3rd") {
                 ChordInKey.innerHTML = "D F# A#";
             } else if (key_Value === "E" && signature_Value === "Natural" && ChordValue === "Triads" && chords_electValue ==="Augmented 3rd") {
@@ -934,19 +934,19 @@ window.onload = function() {
             } else if (key_Value === "B" && signature_Value === "Sharp" && ChordValue === "Tetrads" && chords_electValue ==="Half Diminished 7th") {
                 ChordInKey.innerHTML = "B# D# F# A#";
 
-            } else if (key_Value === "C" && signature_Value === "Natural" && ChordValue === "Tetrads" && chords_electValue ==="Half Diminished 7th") {
+            } else if (key_Value === "C" && signature_Value === "Flat" && ChordValue === "Tetrads" && chords_electValue ==="Half Diminished 7th") {
                 ChordInKey.innerHTML = "Cb Ebb Gbb Bbb";
-            } else if (key_Value === "D" && signature_Value === "Natural" && ChordValue === "Tetrads" && chords_electValue ==="Half Diminished7th") {
+            } else if (key_Value === "D" && signature_Value === "Flat" && ChordValue === "Tetrads" && chords_electValue ==="Half Diminished7th") {
                 ChordInKey.innerHTML = "Db Fb Abb Cb";
-            } else if (key_Value === "E" && signature_Value === "Natural" && ChordValue === "Tetrads" && chords_electValue ==="Half Diminished 7th") {
+            } else if (key_Value === "E" && signature_Value === "Flat" && ChordValue === "Tetrads" && chords_electValue ==="Half Diminished 7th") {
                 ChordInKey.innerHTML = "Eb Gb Bbb Db";
-            } else if (key_Value === "F" && signature_Value === "Natural" && ChordValue === "Tetrads" && chords_electValue ==="Half Diminished 7th") {
+            } else if (key_Value === "F" && signature_Value === "Flat" && ChordValue === "Tetrads" && chords_electValue ==="Half Diminished 7th") {
                 ChordInKey.innerHTML = "Fb Abb Cbb Ebb";
-            } else if (key_Value === "G" && signature_Value === "Natural" && ChordValue === "Tetrads" && chords_electValue ==="Half Diminished 7th") {
+            } else if (key_Value === "G" && signature_Value === "Flat" && ChordValue === "Tetrads" && chords_electValue ==="Half Diminished 7th") {
                 ChordInKey.innerHTML = "Gb Bbb Dbb Fb";
-            } else if (key_Value === "A" && signature_Value === "Natural" && ChordValue === "Tetrads" && chords_electValue ==="Half Diminished 7th") {
+            } else if (key_Value === "A" && signature_Value === "Flat" && ChordValue === "Tetrads" && chords_electValue ==="Half Diminished 7th") {
                 ChordInKey.innerHTML = "Ab Cb Ebb Gb";
-            } else if (key_Value === "B" && signature_Value === "Natural" && ChordValue === "Tetrads" && chords_electValue ==="Half Diminished 7th") {
+            } else if (key_Value === "B" && signature_Value === "Flat" && ChordValue === "Tetrads" && chords_electValue ==="Half Diminished 7th") {
                 ChordInKey.innerHTML = "Bb Db Fb Ab";
 
             } else if (key_Value === "C" && signature_Value === "Natural" && ChordValue === "Tetrads" && chords_electValue ==="Augmented 7th") {
@@ -1166,6 +1166,67 @@ window.onload = function() {
 
 
 
+
+
+
+    var buttons = document.querySelectorAll("button"),
+        i
+    for (i = 0; i < buttons.length; i++) {
+        buttons[i].addEventListener("click", function () {
+            for (var k = 0; k < this.children.length; k++) {
+                if (this.children[k].style.visibility === "visible") {
+                    console.log("visible")
+                    this.children[k].style.visibility = "hidden"
+                } else {
+                    console.log("hidden")
+                    this.children[k].style.visibility = "visible"
+                }
+                // this.children[k].style.visibility = "visible"
+                // console.log(k)
+                // this.children[k].classList.toggle("active")
+            }
+        })
+    }
+
+
+    let btn = document.getElementById("1st");
+    let visible = false;
+    let eyeSVG = document.getElementById("eye-svg");
+
+    btn.addEventListener("click", function() {
+        let elements = document.querySelectorAll("span");
+        for (let i = 0; i < elements.length; i++) {
+            if (!visible) {
+                btn.innerHTML="Hide the notations";
+                elements[i].style.visibility = "visible";
+                eyeSVG.innerHTML= '<svg width="40" height="40" clip-rule="evenodd" fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m17.5 11c2.484 0 4.5 2.016 4.5 4.5s-2.016 4.5-4.5 4.5-4.5-2.016-4.5-4.5 2.016-4.5 4.5-4.5zm-5.346 6.999c-.052.001-.104.001-.156.001-4.078 0-7.742-3.093-9.854-6.483-.096-.159-.144-.338-.144-.517s.049-.358.145-.517c2.111-3.39 5.775-6.483 9.853-6.483 4.143 0 7.796 3.09 9.864 6.493.092.156.138.332.138.507 0 .179-.062.349-.15.516-.58-.634-1.297-1.14-2.103-1.472-1.863-2.476-4.626-4.544-7.749-4.544-3.465 0-6.533 2.632-8.404 5.5 1.815 2.781 4.754 5.34 8.089 5.493.09.529.25 1.034.471 1.506zm3.071-2.023 1.442 1.285c.095.085.215.127.333.127.136 0 .271-.055.37-.162l2.441-2.669c.088-.096.131-.217.131-.336 0-.274-.221-.499-.5-.499-.136 0-.271.055-.37.162l-2.108 2.304-1.073-.956c-.096-.085-.214-.127-.333-.127-.277 0-.5.224-.5.499 0 .137.056.273.167.372zm-3.603-.994c-2.031-.19-3.622-1.902-3.622-3.982 0-2.208 1.792-4 4-4 1.804 0 3.331 1.197 3.829 2.84-.493.146-.959.354-1.389.615-.248-1.118-1.247-1.955-2.44-1.955-1.38 0-2.5 1.12-2.5 2.5 0 1.363 1.092 2.472 2.448 2.499-.169.47-.281.967-.326 1.483z" fill-rule="nonzero"/></svg>';
+
+            } else {
+                btn.innerHTML="Show the notations";
+                elements[i].style.visibility = "hidden";
+                eyeSVG.innerHTML= '<svg width="40" height="40" clip-rule="evenodd" fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m17.5 11c2.484 0 4.5 2.016 4.5 4.5s-2.016 4.5-4.5 4.5-4.5-2.016-4.5-4.5 2.016-4.5 4.5-4.5zm-5.346 6.999c-.052.001-.104.001-.156.001-4.078 0-7.742-3.093-9.854-6.483-.096-.159-.144-.338-.144-.517s.049-.358.145-.517c2.111-3.39 5.775-6.483 9.853-6.483 4.143 0 7.796 3.09 9.864 6.493.092.156.138.332.138.507 0 .179-.062.349-.15.516-.58-.634-1.297-1.14-2.103-1.472-1.863-2.476-4.626-4.544-7.749-4.544-3.465 0-6.533 2.632-8.404 5.5 1.815 2.781 4.754 5.34 8.089 5.493.09.529.25 1.034.471 1.506zm6.053-2.499s.642-.642 1.061-1.061c.187-.187.187-.519 0-.707-.188-.187-.52-.187-.707 0-.419.419-1.061 1.061-1.061 1.061s-.642-.642-1.061-1.061c-.187-.187-.519-.187-.707 0-.187.188-.187.52 0 .707.419.419 1.061 1.061 1.061 1.061s-.642.642-1.061 1.061c-.187.187-.187.519 0 .707.188.187.52.187.707 0 .419-.419 1.061-1.061 1.061-1.061s.642.642 1.061 1.061c.187.187.519.187.707 0 .187-.188.187-.52 0-.707-.419-.419-1.061-1.061-1.061-1.061zm-6.585-.518c-2.031-.19-3.622-1.902-3.622-3.982 0-2.208 1.792-4 4-4 1.804 0 3.331 1.197 3.829 2.84-.493.146-.959.354-1.389.615-.248-1.118-1.247-1.955-2.44-1.955-1.38 0-2.5 1.12-2.5 2.5 0 1.363 1.092 2.472 2.448 2.499-.169.47-.281.967-.326 1.483z" fill-rule="nonzero"/></svg>';
+
+            }
+        }
+
+        visible = !visible;
+    });
+
+
+    function ShowAll(){
+
+        buttons.forEach(function(button) {
+            button.addEventListener("click", function() {
+                // 获取当前按钮的子元素
+                var children = button.children;
+                // 显示所有子元素
+                for (let i = 0; i < children.length; i++) {
+                    children[i].style.visibility = 'visible';
+                }
+            });
+        });
+    }
+
 }
 
 // piano
@@ -1179,6 +1240,8 @@ function playNote(note) {
         console.error(`Error playing ${note}.mp3: ${error}`);
     });
 }
+
+
 
 
 
