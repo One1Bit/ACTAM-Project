@@ -934,19 +934,19 @@ window.onload = function() {
             } else if (key_Value === "B" && signature_Value === "Sharp" && ChordValue === "Tetrads" && chords_electValue ==="Half Diminished 7th") {
                 ChordInKey.innerHTML = "B# D# F# A#";
 
-            } else if (key_Value === "C" && signature_Value === "Natural" && ChordValue === "Tetrads" && chords_electValue ==="Half Diminished 7th") {
+            } else if (key_Value === "C" && signature_Value === "Flat" && ChordValue === "Tetrads" && chords_electValue ==="Half Diminished 7th") {
                 ChordInKey.innerHTML = "Cb Ebb Gbb Bbb";
-            } else if (key_Value === "D" && signature_Value === "Natural" && ChordValue === "Tetrads" && chords_electValue ==="Half Diminished7th") {
+            } else if (key_Value === "D" && signature_Value === "Flat" && ChordValue === "Tetrads" && chords_electValue ==="Half Diminished7th") {
                 ChordInKey.innerHTML = "Db Fb Abb Cb";
-            } else if (key_Value === "E" && signature_Value === "Natural" && ChordValue === "Tetrads" && chords_electValue ==="Half Diminished 7th") {
+            } else if (key_Value === "E" && signature_Value === "Flat" && ChordValue === "Tetrads" && chords_electValue ==="Half Diminished 7th") {
                 ChordInKey.innerHTML = "Eb Gb Bbb Db";
-            } else if (key_Value === "F" && signature_Value === "Natural" && ChordValue === "Tetrads" && chords_electValue ==="Half Diminished 7th") {
+            } else if (key_Value === "F" && signature_Value === "Flat" && ChordValue === "Tetrads" && chords_electValue ==="Half Diminished 7th") {
                 ChordInKey.innerHTML = "Fb Abb Cbb Ebb";
-            } else if (key_Value === "G" && signature_Value === "Natural" && ChordValue === "Tetrads" && chords_electValue ==="Half Diminished 7th") {
+            } else if (key_Value === "G" && signature_Value === "Flat" && ChordValue === "Tetrads" && chords_electValue ==="Half Diminished 7th") {
                 ChordInKey.innerHTML = "Gb Bbb Dbb Fb";
-            } else if (key_Value === "A" && signature_Value === "Natural" && ChordValue === "Tetrads" && chords_electValue ==="Half Diminished 7th") {
+            } else if (key_Value === "A" && signature_Value === "Flat" && ChordValue === "Tetrads" && chords_electValue ==="Half Diminished 7th") {
                 ChordInKey.innerHTML = "Ab Cb Ebb Gb";
-            } else if (key_Value === "B" && signature_Value === "Natural" && ChordValue === "Tetrads" && chords_electValue ==="Half Diminished 7th") {
+            } else if (key_Value === "B" && signature_Value === "Flat" && ChordValue === "Tetrads" && chords_electValue ==="Half Diminished 7th") {
                 ChordInKey.innerHTML = "Bb Db Fb Ab";
 
             } else if (key_Value === "C" && signature_Value === "Natural" && ChordValue === "Tetrads" && chords_electValue ==="Augmented 7th") {
