@@ -58,5 +58,19 @@ the *Go Practice!* button in the upper right corner.
 ## Practice
 
 Here we design a game to help you check the knowledge you 
-have learned more easily.
-- 
+have learned more easily :)
+
+- The keyboard is remained on the top, expanding the register to C2-C6 
+as a reference.
+<p align="center">
+<img src="readme-images/keyboard-2.png" width="300">
+</p>
+
+- Then you could start the game in PRACTICE box below. Click *Practice* 
+button to start. Notes appear randomly on the staff corresponding to 
+treble and bass clef. You could input your answer through keyboard on
+your computer. Here is the instruction:
+
+You have five seconds to answer each note.
+When the progress bar of the timer reaches the end, the time is up.
+A reminder will appear after press each key to tell you whether it is correct.
