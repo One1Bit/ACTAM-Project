@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8c7e6b79-862d-4ae3-8f1a-6235c20744d6" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/readme-images/goback.png" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/readme-images/learning.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/readme-images/practice.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

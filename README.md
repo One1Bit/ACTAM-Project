@@ -13,6 +13,11 @@ Try it now!
 
 ## Learning
 
+<p align="center">
+<img src="readme-images/learning.png" width="600">
+</p>
+
+
 - The first step for the beginner is to learn the keyboard (F2 to C5).
   When the mouse is near a key, the corresponding note name will be displayed.
 By clicking the key, its sound is played.
@@ -58,6 +63,10 @@ the *Go Practice!* button in the upper right corner.
 </p>
 
 ## Practice
+
+<p align="center">
+<img src="readme-images/practice.png" width="600">
+</p>
 
 Here we design a game to help you check the knowledge you 
 have learned more easily :)
