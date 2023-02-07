@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8c7e6b79-862d-4ae3-8f1a-6235c20744d6" name="Changes" comment="" />
+    <list default="true" id="8c7e6b79-862d-4ae3-8f1a-6235c20744d6" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/readme-images/goback.png" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
