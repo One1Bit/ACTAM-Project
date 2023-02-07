@@ -86,5 +86,5 @@ The game ends when you go though 5 notes.
 - You could go back to the learning part by clicking
   the *Back* button in the upper left corner.
 <p align="center">
-<img src="readme-images/goback.png" width="150">
+<img src="readme-images/goback.png" width="120">
 </p>
