@@ -273,9 +273,9 @@ window.onload = function() {
                 // change key color
                 document.querySelectorAll(`[note='${modified_scale_notes[i]}${octave[i]}']`).forEach(function(element) {
                     if (element.classList.contains("key-white")) {
-                        element.style.backgroundColor = "rgba(243,163,13,0.5)";
+                        element.style.backgroundColor = "rgb(245,180,25)";
                     } else if (element.classList.contains("key-black")) {
-                        element.style.backgroundColor = "rgba(107,71,4,0.8)";
+                        element.style.backgroundColor = "rgb(131,96,18)";
                     }
                 });
             }, 400 * i);
@@ -1087,9 +1087,9 @@ window.onload = function() {
                 // change key color
                 document.querySelectorAll(`[note='${modified_chord_notes[i]}${octave_chord[i]}']`).forEach(function (element) {
                     if (element.classList.contains("key-white")) {
-                        element.style.backgroundColor = "rgba(243,163,13,0.5)";
+                        element.style.backgroundColor = "rgb(245,180,25)";
                     } else if (element.classList.contains("key-black")) {
-                        element.style.backgroundColor = "rgba(107,71,4,0.8)";
+                        element.style.backgroundColor = "rgb(131,96,18)";
                     }
                 });
             }, 0);

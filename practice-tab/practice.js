@@ -55,7 +55,38 @@ export function setRightClick(value) {
     rightClick = value;
 }
 
-window.addEventListener("keydown", matching);
+let pianoKeyboard = document.getElementById('piano');
+let buttons = pianoKeyboard.querySelectorAll('button');
+let clickedPianoKey;
+let clickedPianoKeyCheck=false;
+let namePressedNote;
+let nameCorrectNote;
+export function setPracticeOn(bool){
+    PracticeOn=bool;
+}
+Array.from(buttons).forEach(function(button,i){
+    button.addEventListener('click', function(e) {
+        if(PracticeOn===true) {
+            clickedPianoKey = buttons[i].getAttribute("note");
+            clickedPianoKeyCheck = true;
+            matching(e);
+        }
+    })
+});
+
+setInterval(()=> {
+    if (counter-2>numberOfPractice && timer.timeLeft<=-1){
+        clearInterval(notesPracticingInterval);
+        document.getElementById("app").style.display = 'none';
+        PracticeOn=false;
+
+    }
+},100);
+window.addEventListener("keydown", (e)=> {
+    clickedPianoKeyCheck = false;
+    matching(e);
+});
+
 
 
 function dyingKeys(name){
@@ -66,34 +97,43 @@ function dyingKeys(name){
             {element.style.backgroundColor = "rgb(255,255,255)";
             }, 1500);
         } else if (element.classList.contains("key-black")) {
-            element.style.backgroundColor = "rgb(10,101,22)";
+            element.style.backgroundColor = "rgb(7,87,18)";
             setTimeout(()=>
             {element.style.backgroundColor = "rgb(44,52,61)";
             }, 1500);
         }
     });
 }
+
 function matching(e) {
-    searchIndex = keyList.findIndex((keyList) => keyList.shortcut === e.key);
-    let namePressedNote = keyList.at(searchIndex).note;
-    let nameCorrectNote = keyList.at(randomNote).note;
+
+
 
     if (PracticeOn === true) {
 
-        //practice-box
-        //if (e.key !== keyList.at(randomNote).shortcut) {
-        if (e.key === "1"){
+        if (clickedPianoKeyCheck===false){
+            searchIndex = keyList.findIndex((keyList) => keyList.shortcut === e.key);
+            namePressedNote = keyList.at(searchIndex).note;
+        }
+        else
+        {
+            namePressedNote=clickedPianoKey;
+        }
+        nameCorrectNote = keyList.at(randomNote).note;
+        console.log(namePressedNote);
+        console.log(nameCorrectNote);
+
+
+        if (namePressedNote === nameCorrectNote){
             clearInterval(notesPracticingInterval);
             notesPracticingIteration();
-            timer.createTextRight(keyList.at(randomNote).note);
+            timer.createTextRight(nameCorrectNote);
             //interacting with keyboard right choice
             dyingKeys(nameCorrectNote);
         } else {
             clearInterval(textInterval);
-            timer.createTextWrong(keyList.at(searchIndex).note);
-            //if (counter<=numberOfPractice) {
-            //    setTimeout(practiceIteration,timer.timeLeft*1000);
-            //}
+            timer.createTextWrong(namePressedNote);
+
             //interacting with keyboard wring choice
             document.querySelectorAll(`[note='${namePressedNote}']`).forEach(function(element) {
                 if (element.classList.contains("key-white")) {
@@ -102,16 +142,14 @@ function matching(e) {
                     {element.style.backgroundColor = "rgb(255,255,255)";
                     }, 1500);
                 } else if (element.classList.contains("key-black")) {
-                    element.style.backgroundColor = "rgb(159,10,10)";
+                    element.style.backgroundColor = "rgb(98,8,8)";
                     setTimeout(()=>
                     {element.style.backgroundColor = "rgb(44,52,61)";
                     }, 1500);
                 }
             });
             dyingKeys(nameCorrectNote);
-
         }
-
         clearInterval(textInterval);
 
         textInterval = setInterval(() => {
@@ -194,7 +232,6 @@ function startPractice(){
             do {
                 randomNote = randomElement(keyList);
             } while (randomNote === checkDoubling)
-
             console.log('42');
             timer.drawTimer();
             timer.startTimer();
@@ -204,24 +241,19 @@ function startPractice(){
             }
             //Chords
             else if (document.getElementById("practice-type").options.selectedIndex === 1) {
-
             }
             else {
                 console.log("Err is in window.onload choosing practice type")
             }
-
             else{
                 setTimeout(()=> {document.getElementById("app").style.display = 'none';
                 PracticeOn=false;}
-
             , timer.TIME_LIMIT*1000);
             }
         }
         else{
             return false
         }
-
-
 }*/
 function drawLine(x1,x2,y){
     context.lineWidth = 2;
@@ -249,6 +281,7 @@ function drawSupportLines(){
 function drawNote(note) {
     context.clearRect(0, 0, canvas.width, canvas.height);
     context.drawImage(imgStaff, 0, 60, 700, 400)
+
     drawSupportLines();
     let c = keyList.at(note).position;
     console.log(c);
@@ -268,6 +301,7 @@ function drawNote(note) {
         context.drawImage(imgWhole, 250 + 10 * c, 14.5 * c + 14.5 * 2, 44, 44);
     }
 }
+
 
 // to practice part
 const go_practice_button = document.querySelector('.button_topage');
