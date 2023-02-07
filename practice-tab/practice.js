@@ -27,7 +27,7 @@ let index = selectItem.selectedIndex;
 selectItem.addEventListener('change', () => {
     index = selectItem.selectedIndex;
 })*/
-k
+
 let numberOfPractice=5;
 let counter;
 let randomNote;
@@ -55,7 +55,40 @@ export function setRightClick(value) {
     rightClick = value;
 }
 
-window.addEventListener("keydown", matching);
+let pianoKeyboard = document.getElementById('piano');
+let buttons = pianoKeyboard.querySelectorAll('button');
+let clickedPianoKey;
+let clickedPianoKeyCheck=false;
+let namePressedNote;
+let nameCorrectNote;
+export function setPracticeOn(bool){
+    PracticeOn=bool;
+}
+Array.from(buttons).forEach(function(button,i){
+    button.addEventListener('click', function(e) {
+        if(PracticeOn===true) {
+            clickedPianoKey = buttons[i].getAttribute("note");
+            clickedPianoKeyCheck = true;
+            matching(e);
+        }
+    })
+});
+
+setInterval(()=> {
+    if (counter-2>numberOfPractice && timer.timeLeft<=-1){
+        clearInterval(notesPracticingInterval);
+        document.getElementById("app").style.display = 'none';
+        PracticeOn=false;
+
+        //console.log('2evefvefvefv');
+    }
+    //console.log(counter);
+},100);
+window.addEventListener("keydown", (e)=> {
+    clickedPianoKeyCheck = false;
+    matching(e);
+});
+
 
 
 function dyingKeys(name){
@@ -73,27 +106,36 @@ function dyingKeys(name){
         }
     });
 }
+
 function matching(e) {
-    searchIndex = keyList.findIndex((keyList) => keyList.shortcut === e.key);
-    let namePressedNote = keyList.at(searchIndex).note;
-    let nameCorrectNote = keyList.at(randomNote).note;
+
+
 
     if (PracticeOn === true) {
 
-        //practice-box
-        //if (e.key !== keyList.at(randomNote).shortcut) {
-        if (e.key === "1"){
+        if (clickedPianoKeyCheck===false){
+            searchIndex = keyList.findIndex((keyList) => keyList.shortcut === e.key);
+            namePressedNote = keyList.at(searchIndex).note;
+        }
+        else
+        {
+            namePressedNote=clickedPianoKey;
+        }
+        nameCorrectNote = keyList.at(randomNote).note;
+        console.log(namePressedNote);
+        console.log(nameCorrectNote);
+
+
+        if (namePressedNote === nameCorrectNote){
             clearInterval(notesPracticingInterval);
             notesPracticingIteration();
-            timer.createTextRight(keyList.at(randomNote).note);
+            timer.createTextRight(nameCorrectNote);
             //interacting with keyboard right choice
             dyingKeys(nameCorrectNote);
         } else {
             clearInterval(textInterval);
-            timer.createTextWrong(keyList.at(searchIndex).note);
-            //if (counter<=numberOfPractice) {
-            //    setTimeout(practiceIteration,timer.timeLeft*1000);
-            //}
+            timer.createTextWrong(namePressedNote);
+
             //interacting with keyboard wring choice
             document.querySelectorAll(`[note='${namePressedNote}']`).forEach(function(element) {
                 if (element.classList.contains("key-white")) {
@@ -109,9 +151,7 @@ function matching(e) {
                 }
             });
             dyingKeys(nameCorrectNote);
-
         }
-
         clearInterval(textInterval);
 
         textInterval = setInterval(() => {

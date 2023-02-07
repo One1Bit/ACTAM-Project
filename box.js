@@ -1,3 +1,4 @@
+
 window.onload = function() {
     // Key
     const key = document.getElementById("key");
@@ -1048,7 +1049,6 @@ window.onload = function() {
         document.getElementById("play_chord").style.display = "block";
     });
     document.getElementById("play_chord").style.display = "none";
-
 
 
 ////////DOING!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!

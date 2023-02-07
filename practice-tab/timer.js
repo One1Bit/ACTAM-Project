@@ -1,7 +1,7 @@
 const FULL_DASH_ARRAY = 283;
 const WARNING_THRESHOLD = 5;
 const ALERT_THRESHOLD = 3;
-
+import {setPracticeOn} from "./practice.js";
 const COLOR_CODES = {
     info: {
         color: "green"
@@ -69,6 +69,7 @@ export function startTimer() {
         {
             clearInterval(timerInterval);
             document.getElementById("app").style.display = 'none';
+            setPracticeOn(false);
 
         }
         timePassed = timePassed + 1;
