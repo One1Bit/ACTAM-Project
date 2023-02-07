@@ -61,6 +61,7 @@ the *Go Practice!* button in the upper right corner.
 
 Here we design a game to help you check the knowledge you 
 have learned more easily :)
+To be more precise you will learn how to read notes from sheets.
 
 - The keyboard is remained on the top, expanding the register to C2-E6 
 as a reference.
@@ -73,9 +74,10 @@ button to start. Here is the instruction:\
 Notes appear randomly on the staff corresponding to 
 treble and bass clef. You could input your answer through keyboard on
 your computer or click the virtual keyboard above. \
-You have five seconds to answer each note.
-When the progress bar of the timer reaches the end, the time is up.
-A reminder will appear after press each key to tell you whether it is correct.
+You have 10 seconds to answer. When the progress bar of the timer reaches the end, the time is up. 
+If you are wrong the application will dye the correct key into green to help you out. 
+The game ends when you go though 5 notes.
+
 <p align="center">
 <img src="readme-images/practice-box.png" width="250">
 <img src="readme-images/right.png" width="400">
