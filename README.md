@@ -80,3 +80,9 @@ A reminder will appear after press each key to tell you whether it is correct.
 <img src="readme-images/practice-box.png" width="250">
 <img src="readme-images/right.png" width="400">
 </p>
+
+- You could go back to the learning part by clicking
+  the *Back* button in the upper left corner.
+<p align="center">
+<img src="readme-images/goback.png" width="150">
+</p>
