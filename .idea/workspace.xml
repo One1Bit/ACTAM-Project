@@ -2,113 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8c7e6b79-862d-4ae3-8f1a-6235c20744d6" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/practice-tab/PianoAudio/A1.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/practice-tab/PianoAudio/A2.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/practice-tab/PianoAudio/A3.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/practice-tab/PianoAudio/A4.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/practice-tab/PianoAudio/A5.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/practice-tab/PianoAudio/A6.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/practice-tab/PianoAudio/A7.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/practice-tab/PianoAudio/As1.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/practice-tab/PianoAudio/As2.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/practice-tab/PianoAudio/As3.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/practice-tab/PianoAudio/As4.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/practice-tab/PianoAudio/As5.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/practice-tab/PianoAudio/As6.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/practice-tab/PianoAudio/As7.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/practice-tab/PianoAudio/B1.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/practice-tab/PianoAudio/B2.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/practice-tab/PianoAudio/B3.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/practice-tab/PianoAudio/B4.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/practice-tab/PianoAudio/B5.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/practice-tab/PianoAudio/B6.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/practice-tab/PianoAudio/B7.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/practice-tab/PianoAudio/C1.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/practice-tab/PianoAudio/C2.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/practice-tab/PianoAudio/C3.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/practice-tab/PianoAudio/C4.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/practice-tab/PianoAudio/C5.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/practice-tab/PianoAudio/C6.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/practice-tab/PianoAudio/C7.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/practice-tab/PianoAudio/C8.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/practice-tab/PianoAudio/Cs1.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/practice-tab/PianoAudio/Cs2.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/practice-tab/PianoAudio/Cs3.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/practice-tab/PianoAudio/Cs4.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/practice-tab/PianoAudio/Cs5.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/practice-tab/PianoAudio/Cs6.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/practice-tab/PianoAudio/Cs7.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/practice-tab/PianoAudio/D1.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/practice-tab/PianoAudio/D2.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/practice-tab/PianoAudio/D3.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/practice-tab/PianoAudio/D4.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/practice-tab/PianoAudio/D5.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/practice-tab/PianoAudio/D6.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/practice-tab/PianoAudio/D7.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/practice-tab/PianoAudio/Ds1.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/practice-tab/PianoAudio/Ds2.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/practice-tab/PianoAudio/Ds3.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/practice-tab/PianoAudio/Ds4.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/practice-tab/PianoAudio/Ds5.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/practice-tab/PianoAudio/Ds6.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/practice-tab/PianoAudio/Ds7.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/practice-tab/PianoAudio/E1.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/practice-tab/PianoAudio/E2.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/practice-tab/PianoAudio/E3.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/practice-tab/PianoAudio/E4.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/practice-tab/PianoAudio/E5.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/practice-tab/PianoAudio/E6.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/practice-tab/PianoAudio/E7.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/practice-tab/PianoAudio/F1.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/practice-tab/PianoAudio/F2.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/practice-tab/PianoAudio/F3.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/practice-tab/PianoAudio/F4.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/practice-tab/PianoAudio/F5.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/practice-tab/PianoAudio/F6.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/practice-tab/PianoAudio/F7.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/practice-tab/PianoAudio/Fs1.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/practice-tab/PianoAudio/Fs2.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/practice-tab/PianoAudio/Fs3.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/practice-tab/PianoAudio/Fs4.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/practice-tab/PianoAudio/Fs5.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/practice-tab/PianoAudio/Fs6.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/practice-tab/PianoAudio/Fs7.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/practice-tab/PianoAudio/G1.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/practice-tab/PianoAudio/G2.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/practice-tab/PianoAudio/G3.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/practice-tab/PianoAudio/G4.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/practice-tab/PianoAudio/G5.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/practice-tab/PianoAudio/G6.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/practice-tab/PianoAudio/G7.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/practice-tab/PianoAudio/Gs1.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/practice-tab/PianoAudio/Gs2.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/practice-tab/PianoAudio/Gs3.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/practice-tab/PianoAudio/Gs4.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/practice-tab/PianoAudio/Gs5.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/practice-tab/PianoAudio/Gs6.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/practice-tab/PianoAudio/Gs7.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/practice-tab/piano.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/practice-tab/piano.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/readme-images/chord-box.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/readme-images/gopractice.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/readme-images/keyboard-2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/readme-images/keyboard.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/readme-images/practice-box.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/readme-images/scale-box.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/readme-images/scale-key.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/box-chord.css" beforeDir="false" afterPath="$PROJECT_DIR$/box-chord.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/box-key.css" beforeDir="false" afterPath="$PROJECT_DIR$/box-key.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/box.js" beforeDir="false" afterPath="$PROJECT_DIR$/box.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/piano.css" beforeDir="false" afterPath="$PROJECT_DIR$/piano.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/practice-tab/box-practice.css" beforeDir="false" afterPath="$PROJECT_DIR$/practice-tab/box-practice.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/practice-tab/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/practice-tab/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/practice-tab/practice.js" beforeDir="false" afterPath="$PROJECT_DIR$/practice-tab/practice.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/practice-tab/second-tab.html" beforeDir="false" afterPath="$PROJECT_DIR$/practice-tab/second-tab.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/practice-tab/timer.css" beforeDir="false" afterPath="$PROJECT_DIR$/practice-tab/timer.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/practice-tab/timer.js" beforeDir="false" afterPath="$PROJECT_DIR$/practice-tab/timer.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -146,6 +40,7 @@
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/readme-images" />
+      <recent name="$PROJECT_DIR$" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/practice-tab" />
