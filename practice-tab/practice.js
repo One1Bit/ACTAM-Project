@@ -80,9 +80,7 @@ setInterval(()=> {
         document.getElementById("app").style.display = 'none';
         PracticeOn=false;
 
-        //console.log('2evefvefvefv');
     }
-    //console.log(counter);
 },100);
 window.addEventListener("keydown", (e)=> {
     clickedPianoKeyCheck = false;
@@ -99,7 +97,7 @@ function dyingKeys(name){
             {element.style.backgroundColor = "rgb(255,255,255)";
             }, 1500);
         } else if (element.classList.contains("key-black")) {
-            element.style.backgroundColor = "rgb(10,101,22)";
+            element.style.backgroundColor = "rgb(7,87,18)";
             setTimeout(()=>
             {element.style.backgroundColor = "rgb(44,52,61)";
             }, 1500);
@@ -144,7 +142,7 @@ function matching(e) {
                     {element.style.backgroundColor = "rgb(255,255,255)";
                     }, 1500);
                 } else if (element.classList.contains("key-black")) {
-                    element.style.backgroundColor = "rgb(159,10,10)";
+                    element.style.backgroundColor = "rgb(98,8,8)";
                     setTimeout(()=>
                     {element.style.backgroundColor = "rgb(44,52,61)";
                     }, 1500);
