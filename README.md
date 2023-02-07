@@ -18,8 +18,10 @@ Try it now!
 By clicking the key, its sound is played.
 By clicking 
 *Hide/Show the notations* button, you could check the note for each key.
+<p align="center">
+<img src="readme-images/keyboard.png" width="550">
+</p>
 
-![keyboard](readme-images/keyboard.png)
 
 - Then go to the KEY box on the left, where you could learn about the key. 
 You need to select a key at first.
@@ -74,3 +76,7 @@ your computer. Here is the instruction:
 You have five seconds to answer each note.
 When the progress bar of the timer reaches the end, the time is up.
 A reminder will appear after press each key to tell you whether it is correct.
+<p align="center">
+<img src="readme-images/practice-box.png" width="170">
+
+</p>

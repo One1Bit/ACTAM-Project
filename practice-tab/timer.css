@@ -1,8 +1,8 @@
 
 .base-timer {
     position: relative;
-    width: 200px;
-    height: 200px;
+    width: 150px;
+    height: 150px;
     opacity: 0.8;
 }
 
@@ -52,7 +52,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 40px;
+    font-size: 30px;
 }
 
 
@@ -69,7 +69,7 @@
 p{
     position: absolute;
     white-space: nowrap;
-    font-size: 24px;
+    font-size: 30px;
     font-weight: normal;
     cursor: pointer;
     text-shadow: 0 0 5px #999;
