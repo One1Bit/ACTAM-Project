@@ -1,0 +1,26 @@
+{
+  "dependencies": {
+    "classnames": "^2.3.2",
+    "sass": "^1.57.1",
+    "scss": "^0.2.4"
+  },
+  "name": "actam-project",
+  "description": "A tutorial for chords and notes",
+  "version": "1.0.0",
+  "main": "Lists.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/One1Bit/ACTAM-Project.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/One1Bit/ACTAM-Project/issues"
+  },
+  "homepage": "https://github.com/One1Bit/ACTAM-Project#readme"
+}

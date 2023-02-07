@@ -1,0 +1,52 @@
+#chord-box {
+    /* previous styles */
+    position: absolute;
+    top: 60%;
+    right: 12%;
+    width: 35%;
+    height: 45%;
+    transform: translate(0%, -50%);
+    background-color: #f2f2f2; /* add a background color */
+    border-radius: 10px; /* add rounded corners */
+    box-shadow: 2px 2px 5px #ccc; /* add a subtle shadow */
+    padding: 1px; /* add some padding to the contents */
+    border-top: 10px solid gray; /* add a border */
+    border-bottom: 10px solid gray;
+    margin: 50px auto; /* center the box horizontally */
+    text-align: center; /* center the contents horizontally */
+}
+
+#chord-box input {
+    /* styles for the input elements */
+
+    font-size: 18px; /* increase font size */
+    padding: 10px; /* add more padding */
+    margin-bottom: 10px; /* add space between inputs */
+    border: none; /* remove the default border */
+    border-bottom: 2px solid #333; /* add a custom border */
+    background-color: transparent; /* remove the default background */
+}
+
+#chord-title {
+    font-size: 20px;
+    font-weight: bold;
+    text-align: left;
+    background-color: lightgray;
+    padding: 10px;
+    margin-top:0px;
+    margin-bottom:10px;
+}
+
+
+.chord-button{
+    margin-top: 5px;
+
+
+}
+
+#chord-index {
+    margin-top: 100px; /* add space above the scale */
+    color: #333; /* change the text color */
+    font: 2vw 'Times New Roman', Times, serif;
+
+}
