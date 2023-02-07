@@ -144,7 +144,7 @@ button:hover{
     height: 60px;
     width:1500px;
     padding: 0 656px;
-    background: linear-gradient(to bottom right, red, yellow);
+    background: linear-gradient(to bottom right, yellow, red);
 
     font-weight: bold;
     font-size: 28px;
