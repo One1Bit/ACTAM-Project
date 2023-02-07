@@ -19,7 +19,7 @@ By clicking the key, its sound is played.
 By clicking 
 *Hide/Show the notations* button, you could check the note for each key.
 <p align="center">
-<img src="readme-images/keyboard.png" width="550">
+<img src="readme-images/keyboard.png" width="600">
 </p>
 
 
@@ -35,8 +35,8 @@ another *Play* button shows. When clicking it, the sound of the notes in
 the scale are played one by one with highlighting of the keys simultaneously.
 
 <p align="center">
-<img src="readme-images/scale-box.png" width="150">
-<img src="readme-images/scale-key.png" width="300">
+<img src="readme-images/scale-box.png" width="250">
+<img src="readme-images/scale-key.png" width="400">
 </p>
 
 - The CHORD box on the right has the similar function of the KEY box. 
@@ -48,13 +48,13 @@ Major 7th | Minor 7th | Dominant 7th | Diminished 7th | Half Diminished 7th Augm
 Also the *Play* button shows after clicking the *Chord* button. This time the sound of the notes in
 the scale are played together as a chord.
 <p align="center">
-<img src="readme-images/chord-box.png" width="150">
+<img src="readme-images/chord-box.png" width="250">
 </p>
 
 - After learning the theory part, you could go on practice by clicking 
 the *Go Practice!* button in the upper right corner.
 <p align="center">
-<img src="readme-images/gopractice.png" width="100">
+<img src="readme-images/gopractice.png" width="200">
 </p>
 
 ## Practice
@@ -65,7 +65,7 @@ have learned more easily :)
 - The keyboard is remained on the top, expanding the register to C2-E6 
 as a reference.
 <p align="center">
-<img src="readme-images/keyboard-2.png" width="300">
+<img src="readme-images/keyboard-2.png" width="400">
 </p>
 
 - Then you could start the game in PRACTICE box below. Click *Practice* 
@@ -77,6 +77,6 @@ You have five seconds to answer each note.
 When the progress bar of the timer reaches the end, the time is up.
 A reminder will appear after press each key to tell you whether it is correct.
 <p align="center">
-<img src="readme-images/practice-box.png" width="150">
-<img src="readme-images/right.png" width="300">
+<img src="readme-images/practice-box.png" width="250">
+<img src="readme-images/right.png" width="400">
 </p>
