@@ -2,7 +2,7 @@
 
 - by Xinmeng Luan, Maksim Ste, Jian Zhou, 07-02-2023
 
-This is an interface for music theory and piano beginners. 
+This is an interface for piano beginners. 
 It is divided into two parts: learning and practice.
 It helps you get familiar with the piano keyboard, 
 learn notes,
@@ -57,4 +57,6 @@ the *Go Practice!* button in the upper right corner.
 
 ## Practice
 
+Here we design a game to help you check the knowledge you 
+have learned more easily.
 - 
