@@ -1,4 +1,4 @@
-# ACTAM-Project: Perfect Chord
+# ACTAM-Project: Piano Basis
 
 - by Xinmeng Luan, Maksim Ste, Jian Zhou, 07-02-2023
 
