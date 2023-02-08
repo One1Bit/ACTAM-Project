@@ -10,6 +10,8 @@ and how to play different scales and chords on the piano.
 Don't doubt, it can help you get started with the piano easily. 
 Try it now!
 
+PS: The main file is index.html. It is recommended to use Webstorm to load the files.
+
 
 ## Learning
 
